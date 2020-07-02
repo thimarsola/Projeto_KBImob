@@ -85,7 +85,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <!--CSS-->
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="_cdn/css/styleMain.css">
 
     <!--TITLE-->
@@ -94,37 +94,47 @@
 
 <body id="home">
     <!--HEADER-->
-    <header class="header">
+    <header>
         <!-- navbar informations -->
-        <nav class="header_nav">
+        <div class="header_nav">
             <div class="container">
                 <div class="row">
                     <!-- place -->
                     <div class="col-sm-3">
-                        <img src="_cdn/img/vt-local.svg" alt="Vetor Local" class="header-nav-image">
-                        <p><a href="https://goo.gl/maps/bR3V67qW9mTvzcBK8">Av. Paulista, 1439 - Cj 41|42<br>São Paulo -
-                                SP</a></p>
+                        <div class="header_nav_card">
+                            <img src="_cdn/img/vt-local.svg" alt="Vetor Local" class="header-nav-image">
+                            <p><a href="https://goo.gl/maps/bR3V67qW9mTvzcBK8">Av. Paulista,
+                                    1439 - Cj 41|42<br>São Paulo -
+                                    SP</a></p>
+                        </div>
                     </div>
                     <!-- hours -->
                     <div class="col-sm-3">
-                        <img src="_cdn/img/vt-time.svg" alt="Vetor Horário" class="header-nav-image">
-                        <p>Seg/Dom: 09:00h - 21:00h</p>
+                        <div class="header_nav_card">
+                            <img src="_cdn/img/vt-time.svg" alt="Vetor Horário" class="header-nav-image">
+                            <p>Seg/Dom: 09:00h - 21:00h</p>
+                        </div>
                     </div>
                     <!-- whatsapp -->
                     <div class="col-sm-3">
-                        <img src="_cdn/img/vt-whatsapp.svg" alt="Vetor Whatsapp" class="header-nav-image">
-                        <p><a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511963840832">(11) 96384-0832</a></p>
+                        <div class="header_nav_card">
+                            <img src="_cdn/img/vt-whatsapp.svg" alt="Vetor Whatsapp" class="header-nav-image">
+                            <p><a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511963840832">(11) 96384-0832</a>
+                            </p>
+                        </div>
                     </div>
                     <!-- whatsapp -->
                     <div class="col-sm-3">
-                        <img src="_cdn/img/vt-phone.svg" alt="Vetor Telefone" class="header-nav-image">
-                        <p><a href="tel:1155944278">(11) 5594-4278</a></p>
+                        <div class="header_nav_card">
+                            <img src="_cdn/img/vt-phone.svg" alt="Vetor Telefone" class="header-nav-image">
+                            <p><a href="tel:1155944278">(11) 5594-4278</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
         <!-- navbar -->
-        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-bg-color1">
+        <nav class="navbar navbar-expand-md navbar-light bg-bg-color1">
             <div class="container">
                 <a href="#">
                     <img src="_cdn/img/logo-header.svg" class="img-fluid" alt="Logo KBImob">
@@ -454,32 +464,103 @@
                         <!-- input -->
                         <div class="form-group">
                             <label for="ctaName">Digite seu nome</label>
-                            <input id="ctaName" type="text" placeholder="Digite seu nome">
+                            <input id="ctaName" class="form-control" type="text" placeholder="Digite seu nome">
                         </div>
                         <!-- input -->
                         <div class="form-group">
                             <label for="inputEscolha">Digite seu melhor e-mail</label>
-                            <input id="ctaName" type="email" placeholder="Digite seu melhor e-mail">
+                            <input id="inputEscolha" class="form-control" type="email"
+                                placeholder="Digite seu melhor e-mail">
+                        </div>
+                        <!-- button -->
+                        <div class="main_ctaForm_content_button">
+                            <button type="submit" class="btn btn-color1 btn-block"><img src="_cdn/img/vt-search.svg"
+                                    alt="Vetor Pesquisa">Pesquisar</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
+        <!-- real estate -->
+        <section id="main_realState">
+            <div class="container">
+                <!-- header -->
+                <header class="main_realState_header">
+                    <h1>KBImob sua Imobiliária Digital!</h1>
+                </header>
+                <!-- content -->
+                <div class="main_realState_content">
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-sm-7">
+                            <!-- about us -->
+                            <div class="main_realState_content_article">
+                                <!-- article -->
+                                <article class="main_realState_content_article">
+                                    <!-- header -->
+                                    <header class="main_realState_content_article_header">
+                                        <h2>Nos <span>Conheça!</span></h2>
+                                        <hr>
+                                    </header>
+                                    <!-- content -->
+                                    <div class="main_realState_content_article_content">
+                                        <p>Nossa maior satisfação é lhe ajudar a encontrar o imóvel dos seus sonhos.</p>
+                                    </div>
+                                </article>
+                                <!-- article -->
+                                <article class="main_realState_content_article">
+                                    <!-- header -->
+                                    <header class="main_realState_content_article_header">
+                                        <h2>Quer <span>Investir?</span></h2>
+                                        <hr>
+                                    </header>
+                                    <!-- content -->
+                                    <div class="main_realState_content_article_content">
+                                        <p>Entre em contato com a nossa equipe e vamos lhe informar sempre sobre os
+                                            melhores negócios.</p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <!-- col -->
+                        <div class="col-sm-5">
+                            <div class="main_realState_content_media">
+                                <a href="https://www.facebook.com/kalila.carla" target="_blank"><img
+                                        src="_cdn/img/vt-facebook.svg" alt="Vetor Facebook"></a>
+                                <a href="https://www.linkedin.com/in/kalila-carla-324b51147" target="_blank"><img
+                                        src="_cdn/img/vt-linkedin.svg" alt="Vetor LinkedIn"></a>
+                                <a href="https://instagram.com/kalilacarla?igshid=1pr3ruvvjtpsx" target="_blank"><img
+                                        src="_cdn/img/vt-instagram.svg" alt="Vetor Instagram"></a>
+                                <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511963840832" target="_blank"><img
+                                        src="_cdn/img/vt-whatsapp-2.svg" alt="Vetor WhatsApp"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!--FOOTER-->
+    <!-- footer -->
     <footer class="footer">
-        <!--DEVELOPER-->
+        <div class="footer_copyright">
+            <div class="container">
+                <hr>
+                <img src="_cdn/img/logo-footer.svg" alt="Logo">
+                <p>Todos os direitos reservados - CRECI 43072-J</p>
+            </div>
+        </div>
+        <!-- developer -->
         <div class="footer_developer">
             <div class="container">
                 <div class="footer_developer_container">
-                    <!-- GOOGNET -->
+                    <!-- goognet -->
                     <div class="footer_developer_goognet">
                         <p>Desenvolvido por: <strong><a href="http://www.goognet.com.br"
                                     title="Desenvolvido por Goognet Solução Digital" target="_blank">Goognet Solução
                                     Digital</a></strong></p>
                     </div>
-                    <!-- W3C VALIDATIOR -->
+                    <!-- W3C validator -->
                     <div class="footer_developer_validator">
                         <!-- HEADER -->
                         <div class="footer_developer_header">

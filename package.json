@@ -1,23 +1,23 @@
 {
-  "name": "projeto_kbimob",
-  "version": "1.0.0",
-  "description": "Projeto Website KBImob",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thimarsola/Projeto_KBImob.git"
-  },
-  "author": "Thiago Marsola - https://github.com/thimarsola",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thimarsola/Projeto_KBImob/issues"
-  },
-  "homepage": "https://github.com/thimarsola/Projeto_KBImob#readme",
-  "devDependencies": {
-    "bootstrap": "^4.5.0",
-    "jquery": "^3.5.1"
-  }
+    "name": "projeto_kbimob",
+    "version": "1.0.0",
+    "description": "Projeto Website KBImob",
+    "main": "index.js",
+    "scripts": {
+        "start": "sass _cdn/scss/:_cdn/css/ --watch --style=compressed"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thimarsola/Projeto_KBImob.git"
+    },
+    "author": "Thiago Marsola - https://github.com/thimarsola",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/thimarsola/Projeto_KBImob/issues"
+    },
+    "homepage": "https://github.com/thimarsola/Projeto_KBImob#readme",
+    "devDependencies": {
+        "bootstrap": "^4.5.0",
+        "jquery": "^3.5.1"
+    }
 }

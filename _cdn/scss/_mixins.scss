@@ -1,21 +1,23 @@
 //CORES
-$color1: #AFCA0B;
-$color2: #747474;
+$color1: #F4CE5F;
+$color2: #333;
 $color3: #fff;
+$color4: #A7A7A7;
 //BACKGROUND COLOR
-$bg-color1: rgba(#EFF3F3, 0.8);
-$bg-color2: rgba(#E5E5E5, 0.2);
-$bg-color3: rgba(#EFF3F3, 0.8);
-$bg-color4: rgba($color1, 0.79);
+$bg-color1: #F8F8F8;
+$bg-color2: rgba(51, 51, 51, 0.3);
 
 //FONT-WEIGHT
 $font-light: 300;
-$font-bold: 500;
+$font-regular: 400;
+$font-bold: 700;
 
 $theme-colors: ("color1": $color1,
 "color2": $color2,
 "color3": $color3,
+"color4": $color4,
 "bg-color1": $bg-color1,
+"bg-color2": $bg-color2,
 );
 
 //BOOTSTRAP
@@ -24,7 +26,6 @@ $theme-colors: ("color1": $color1,
 @import "../../node_modules/bootstrap/scss/mixins";
 
 @import "../../node_modules/bootstrap/scss/buttons";
-@import "../../node_modules/bootstrap/scss/card";
 @import "../../node_modules/bootstrap/scss/custom-forms";
 @import "../../node_modules/bootstrap/scss/dropdown";
 @import "../../node_modules/bootstrap/scss/forms";

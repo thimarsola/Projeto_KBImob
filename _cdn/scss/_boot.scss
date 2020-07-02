@@ -4,7 +4,14 @@
     box-sizing: border-box;
     text-decoration: none !important;
     font-size: 16px;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Roboto', sans-serif;
     font-weight: $font-light;
     color: $color2;
+    span, a{
+        font:{
+            size: inherit !important;
+            weight: inherit !important;
+        }
+        color: inherit !important;
+    }
 }

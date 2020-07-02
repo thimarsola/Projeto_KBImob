@@ -1,0 +1,15 @@
+header {
+    margin: 0;
+    padding: 0;
+    .header_nav{
+        margin: 0;
+        padding: 0;
+        background:{
+            color: $color1;
+        }
+        .header_nav_card{
+            display: flex;
+            
+        }
+    }
+}
