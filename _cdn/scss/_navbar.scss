@@ -1,6 +1,12 @@
-header {
+#header {
     margin: 0;
     padding: 0;
+    border-bottom: 2px solid $color1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 10000;
     .header_nav{
         margin: 0;
         padding: 0;
@@ -8,8 +14,67 @@ header {
             color: $color1;
         }
         .header_nav_card{
+            margin: 0;
+            padding: 0.5em 0;
             display: flex;
-            
+            justify-content: center;
+            align-items: center;
+            p{
+                margin: 0 0 0 .75em;
+                padding: 0;
+                font:{
+                    size: .875em;
+                    weight: $font-regular;
+                }
+                color: $color3;
+                a{
+                    &:hover{
+                        color: darken($color1, 30%);
+                        @include transition;
+                    }
+                }
+            }
+        }
+    }
+    .navbar{
+        backdrop-filter: blur(10px);
+        .collapse{
+            .navbar-nav{
+                .nav-item{
+                        text: {
+                            align: center;
+                        }
+                    .nav-link{
+                        position: relative;
+                        font:{
+                            size: 1.125em;
+                            weight: $font-regular;
+                        }
+                        color: $color2;
+                        &:hover{
+                            color: $color1;
+                            @include transition;
+                        }
+                    }
+                    &:last-child{
+                        .nav-link{
+                            margin: 0;
+                            padding: 0.625em 1.125em;
+                            background:{
+                                color: $color1;
+                            }
+                            border-radius: 2em;
+                            color: $color3;
+                            &:hover{
+                                background: {
+                                    color: darken($color1, 10%);
+                                }
+                                @include transition;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

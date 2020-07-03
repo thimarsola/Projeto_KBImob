@@ -6,6 +6,7 @@ $color4: #A7A7A7;
 //BACKGROUND COLOR
 $bg-color1: #F8F8F8;
 $bg-color2: rgba(51, 51, 51, 0.3);
+$bg-color3: rgba(#F9F9F9, 0.7);
 
 //FONT-WEIGHT
 $font-light: 300;
@@ -18,6 +19,7 @@ $theme-colors: ("color1": $color1,
 "color4": $color4,
 "bg-color1": $bg-color1,
 "bg-color2": $bg-color2,
+"bg-color3": $bg-color3,
 );
 
 //BOOTSTRAP
