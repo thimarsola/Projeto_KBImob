@@ -4,7 +4,31 @@
     transition: ease-in-out .3s all;
 }
 
+@mixin marginSet {
+    margin: 0;
+    padding: 0;
+}
+
 @mixin margin{
     margin: 0;
     padding: 5em 0;
+}
+
+@mixin background($color) {
+    background:{
+        color: $color;
+    }
+}
+
+@mixin font($size, $weight) {
+    font:{
+        size: $size;
+        weight: $weight;
+    }
+}
+
+@mixin textAlign($align){
+    text:{
+        align: $align;
+    }
 }
