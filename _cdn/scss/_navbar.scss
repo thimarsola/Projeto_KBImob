@@ -7,28 +7,35 @@
     left: 0;
     width: 100vw;
     z-index: 10000;
-    .header_nav{
+
+    .header_nav {
         margin: 0;
         padding: 0;
-        background:{
+
+        background: {
             color: $color1;
         }
-        .header_nav_card{
+
+        .header_nav_card {
             margin: 0;
             padding: 0.5em 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            p{
+
+            p {
                 margin: 0 0 0 .75em;
                 padding: 0;
-                font:{
+
+                font: {
                     size: .875em;
                     weight: $font-regular;
                 }
+
                 color: $color3;
-                a{
-                    &:hover{
+
+                a {
+                    &:hover {
                         color: darken($color1, 30%);
                         @include transition;
                     }
@@ -36,39 +43,54 @@
             }
         }
     }
-    .navbar{
+
+    .navbar {
         backdrop-filter: blur(10px);
-        .collapse{
-            .navbar-nav{
-                .nav-item{
-                        text: {
-                            align: center;
-                        }
-                    .nav-link{
+
+        .collapse {
+            .navbar-nav {
+                .nav-item {
+                    text: {
+                        align: center;
+                    }
+
+                    .nav-link {
                         position: relative;
-                        font:{
+
+                        font: {
                             size: 1.125em;
                             weight: $font-regular;
                         }
+
                         color: $color2;
-                        &:hover{
+
+                        &:hover {
                             color: $color1;
                             @include transition;
                         }
                     }
-                    &:last-child{
-                        .nav-link{
+
+                    &:last-child {
+                        .nav-link {
                             margin: 0;
                             padding: 0.625em 1.125em;
-                            background:{
+
+                            background: {
                                 color: $color1;
                             }
+
                             border-radius: 2em;
                             color: $color3;
-                            &:hover{
+
+                            text: {
+                                shadow: 0px 0px 10px rgba($color2, .6);
+                            }
+
+                            &:hover {
                                 background: {
                                     color: darken($color1, 10%);
                                 }
+
                                 @include transition;
                             }
                         }

@@ -3,3 +3,8 @@
     -moz-transition: ease-in-out .3s all;
     transition: ease-in-out .3s all;
 }
+
+@mixin margin{
+    margin: 0;
+    padding: 5em 0;
+}
