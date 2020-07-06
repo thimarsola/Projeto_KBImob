@@ -1,0 +1,67 @@
+#main_pillars {
+    @include margin;
+
+    background: {
+        image: url('../img/bg-pillars.jpg');
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+    }
+
+    .main_pillars_header {
+        margin-bottom: 5em;
+        padding: 0;
+
+        h1 {
+            @include marginSet;
+            @include font(2em, $font-bold);
+
+            span {
+                color: $color1;
+            }
+        }
+
+        hr {
+            margin-top: 1.5em;
+            padding: 0;
+            width: 5em;
+            border: 1.5px solid $color1;
+        }
+    }
+
+    .main_pillars_content {
+        .main_pillars_content_card {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .main_pillars_content_card_header {
+        margin-bottom: 1em;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+            margin-bottom: 2.5em;
+        }
+
+        h2 {
+            @include marginSet;
+            @include font(1.75em, $font-regular);
+            @include textAlign(center);
+        }
+    }
+
+    .main_pillars_content_card_content {
+        @include marginSet;
+
+        p {
+            @include marginSet;
+            @include font(1em, $font-light);
+            @include textAlign(justify);
+        }
+    }
+
+}

@@ -1,35 +1,21 @@
-#main_spotlight {
+#main_hire {
     @include margin;
-    @include background($bg-color1);
 
     // header
-    .main_spotlight_header {
+    .main_hire_header {
         margin-bottom: 3.5em;
 
         h1 {
-            margin: 0;
+            margin-bottom: 0.5em;
             padding: 0;
             @include font(2em, $font-regular);
-            @include textAlign(center);
-
-            span {
-                color: $color1;
-
-                font: {
-                    weight: $font-bold;
-                }
-            }
-        }
-
-        hr {
-            margin: 1em auto 1.25em auto;
-            width: 5em;
-            border: 1.5px solid $color1;
+            @include textAlign(justify);
+            color: $color1;
         }
 
         p {
             @include marginSet;
-            @include textAlign(center);
+            @include textAlign(justify);
             @include font(1.25em, $font-regular);
             color: $color4;
         }

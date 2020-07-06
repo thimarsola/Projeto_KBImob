@@ -1,5 +1,5 @@
 //CORES
-$color1: #F4CE5F;
+$color1: darken(#F4CE5F, 5%);
 $color2: #333;
 $color3: #fff;
 $color4: #A7A7A7;
@@ -7,20 +7,20 @@ $color4: #A7A7A7;
 $bg-color1: #F8F8F8;
 $bg-color2: rgba(51, 51, 51, 0.3);
 $bg-color3: rgba(#F9F9F9, 0.7);
-$bg-color4: rgba(255,255,255, 0.4);
+$bg-color4: rgba(255, 255, 255, 0.4);
 
 //FONT-WEIGHT
 $font-light: 300;
 $font-regular: 400;
-$font-bold: 700;
+$font-bold: 500;
 
 $theme-colors: ("color1": $color1,
-"color2": $color2,
-"color3": $color3,
-"color4": $color4,
-"bg-color1": $bg-color1,
-"bg-color2": $bg-color2,
-"bg-color3": $bg-color3,
+    "color2": $color2,
+    "color3": $color3,
+    "color4": $color4,
+    "bg-color1": $bg-color1,
+    "bg-color2": $bg-color2,
+    "bg-color3": $bg-color3,
 );
 
 //BOOTSTRAP

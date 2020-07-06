@@ -1,0 +1,111 @@
+%card {
+
+    // content
+    .main_cardAds_content {
+        margin-bottom: 3.75em;
+        padding: 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+
+        .main_cardAds {
+            margin: 0;
+            padding: 0;
+
+            background {
+                color: $color3;
+            }
+
+            box-shadow: 0 0 10px rgba(#333, .3);
+            border-radius: .375em;
+
+            &:hover {
+                transform: scale(1.025);
+                @include transition;
+            }
+
+            .main_cardAds_header {
+                margin: 0;
+                padding: 0;
+
+                img {
+                    width: 100%;
+                    max-height: 15em;
+
+                    object: {
+                        fit: cover;
+                        position: center;
+                    }
+                }
+
+                .main_cardAds_header_container {
+                    margin: 0;
+                    padding: 2em;
+
+                    h2 {
+                        margin: 0;
+                        padding: 0;
+                        @include font(1.25em, $font-regular);
+                    }
+
+                    hr {
+                        margin: .625em 0 0 0;
+                        padding: 0;
+                        width: 2.8em;
+                        border: 1px solid $color1;
+                    }
+                }
+            }
+
+            .main_cardAds_content {
+                margin: 0;
+                padding: .75em 2em 2em 2em;
+                display: block;
+
+                p {
+                    margin: 0;
+                    padding: 0;
+                    @include font(1em, $font-regular);
+                }
+
+                .price {
+                    margin-bottom: 1.25em;
+                    @include font(1.5em, $font-bold);
+                    color: $color1;
+                }
+
+                a {
+                    padding: .5em 2em;
+                    color: $color3;
+                }
+            }
+
+            .main_cardAds_content_data {
+                margin: 0;
+                padding: 1em 2em;
+                width: 100%;
+                @include background(darken(#F8F8F8, 3%));
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .main_cardAds_content_data_content {
+                    margin: 0;
+                    padding: 0;
+
+                    img {
+                        margin-bottom: 0.5em;
+                    }
+
+                    p {
+                        margin: 0;
+                        padding: 0;
+                        @include textAlign(center);
+                        @include font(1em, $font-regular);
+                    }
+                }
+            }
+        }
+    }
+}
