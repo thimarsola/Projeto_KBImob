@@ -1,9 +1,11 @@
 // tablet
 @media screen and (max-width: 768px) {
+
     //BODY
     * {
         font-size: 14px;
     }
+
     // header
     header {
         .navbar {
@@ -11,15 +13,31 @@
                 .navbar-nav {
                     .nav-item {
                         margin: 1em 0;
+
+                        &:last-child {
+                            .nav-link {
+                                margin: 0 !important;
+                            }
+                        }
                     }
                 }
             }
         }
     }
+
+    // real state
+    #main_realState {
+        .main_realState_content_media {
+            max-width: 20em;
+            margin: 3em auto 0 0;
+        }
+    }
+
 }
 
 // mobile
 @media screen and (max-width: 425px) {
+
     // header
     header {
         margin: 0;
@@ -29,13 +47,16 @@
             display: none;
         }
     }
+
     // cta
-    #main_cta{
+    #main_cta {
         padding: .5em;
-        .main_cta_header{
+
+        .main_cta_header {
             padding: 3em 1.5em;
         }
-        .main_cta_content{
+
+        .main_cta_content {
             padding: 1em;
             display: flex;
             justify-content: center;
@@ -44,19 +65,22 @@
 
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 375px) {
+
     // cta
     #main_cta {
         .main_cta_header {
             padding: 3em 1em;
-                    h1 {
-                        margin: 0;
-                        padding: 0;
-                        font: {
-                            size: 2.5em;
-                            weight: $font-light;
-                        }
-                    }
+
+            h1 {
+                margin: 0;
+                padding: 0;
+
+                font: {
+                    size: 2.5em;
+                    weight: $font-light;
+                }
+            }
         }
 
         .main_cta_content {
@@ -64,6 +88,7 @@
                 font: {
                     size: 1em;
                 }
+
                 &:first-child {
                     margin-right: 1em;
                 }

@@ -45,7 +45,8 @@
     }
 
     .navbar {
-        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
 
         .collapse {
             .navbar-nav {
@@ -72,7 +73,7 @@
 
                     &:last-child {
                         .nav-link {
-                            margin: 0;
+                            margin-left: 1.25em;
                             padding: 0.625em 1.125em;
 
                             background: {
