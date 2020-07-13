@@ -1,0 +1,11 @@
+#main_home {
+    @include marginSet;
+    min-height: 45vh;
+
+    background: {
+        image: url('../img/bg-headerSingle.png');
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    }
+}

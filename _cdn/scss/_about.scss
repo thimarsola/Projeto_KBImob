@@ -1,0 +1,49 @@
+#main_about {
+    @include margin;
+
+    .main_about_header {
+        margin-bottom: 2em;
+
+        h1 {
+            @include marginSet;
+            @include font(2.75em, $font-regular);
+            @include textAlign(center);
+        }
+
+        hr {
+            margin: 1.5em auto 0 auto;
+            padding: 0;
+            width: 5em;
+            border: 1.5px solid $color1;
+        }
+    }
+
+    .main_about_content {
+        .main_about_content_image {
+            @include marginSet;
+            width: 100% !important;
+            height: 100% !important;
+
+            img {
+                @include marginSet;
+                width: 100% !important;
+                height: 100% !important;
+
+                -o-object-fit: cover !important;
+                object-fit: cover !important;
+            }
+
+        }
+
+        .main_about_content_text {
+            @include marginSet;
+
+            p {
+                @include marginSet;
+                @include font(1em, $font-light);
+                @include textAlign(justify);
+            }
+        }
+    }
+
+}

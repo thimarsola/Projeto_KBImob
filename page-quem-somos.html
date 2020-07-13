@@ -86,7 +86,7 @@
 
     <!--CSS-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="_cdn/css/styleMain.css">
+    <link rel="stylesheet" href="_cdn/css/styleAbout.css">
 
     <!--TITLE-->
     <title>Imobiliária KBImob, sua imobiliária Digital</title>
@@ -177,282 +177,56 @@
 
     <!--MAIN-->
     <main class="main">
-        <!-- cta -->
-        <section id="main_cta">
-            <div class="main_cta_container">
-                <!-- header -->
-                <header class="main_cta_header">
-                    <h1>Oportunidades únicas,<br><span>Realize já seu sonho!</span></h1>
-                </header>
-                <!-- content -->
-                <div class="main_cta_content">
-                    <a href="#main_sale" class="btn btn-color1">Quero <strong>Comprar</strong> <img
-                            src="_cdn/img/vt-arrow.svg" alt="Vetor Seta"></a>
-                    <a href="#main_hire" class="btn btn-color1">Quero <strong>Alugar</strong> <img
-                            src="_cdn/img/vt-arrow.svg" alt="Vetor Seta"></a>
-                </div>
-                <!-- scroll -->
-                <div class="main_cta_scroll">
-                    <a href="#main_search"><span></span></a>
-                </div>
-            </div>
-        </section>
-        <!-- search -->
-        <div id="main_search">
-            <div class="container">
-                <!-- form -->
-                <form>
-                    <div class="form-row">
-                        <!-- Escolha -->
-                        <div class="form-group col-md-3">
-                            <label for="inputEscolha">Comprar ou Alugar?</label>
-                            <select id="inputEscolha" class="form-control">
-                                <option selected>Escolha...</option>
-                                <option>Comprar</option>
-                                <option>Alugar</option>
-                            </select>
-                        </div>
-                        <!-- Status -->
-                        <div class="form-group col-md-3">
-                            <label for="inputStatus">Status</label>
-                            <select id="inputStatus" class="form-control">
-                                <option selected>Escolha...</option>
-                            </select>
-                        </div>
-                        <!-- Tipo -->
-                        <div class="form-group col-md-3">
-                            <label for="inputTipo">Qual o tipo de imóvel?</label>
-                            <select id="inputTipo" class="form-control">
-                                <option selected>Escolha...</option>
-                            </select>
-                        </div>
-                        <!-- Localização -->
-                        <div class="form-group col-md-3">
-                            <label for="inputLocalizacao">Qual a localização?</label>
-                            <select id="inputLocalizacao" class="form-control">
-                                <option selected>Escolha...</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="main_search_button">
-                        <button type="submit" class="btn btn-color1"><img src="_cdn/img/vt-search.svg"
-                                alt="Vetor Pesquisa">Pesquisar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!-- spotlight -->
-        <section id="main_spotlight">
+        <!-- home -->
+        <div id="main_home"></div>
+        <!-- about -->
+        <section id="main_about">
             <div class="container">
                 <!-- header -->
-                <header class="main_spotlight_header">
-                    <h1>Seu imóvel com o seu <span>estilo</span></h1>
-                    <hr>
-                    <p>Encontre o imóvel com a experiência que você quer viver!</p>
-                </header>
-                <!-- content -->
-                <div class="main_cardAds_content">
-                    <!-- card ads -->
-                    <article class="main_cardAds">
-                        <!-- header -->
-                        <header class="main_cardAds_header">
-                            <img src="_cdn/img/img-example.jpg" class="img-fluid" alt="Imagem Anúncio KBImob">
-                            <div class="main_cardAds_header_container">
-                                <h2><strong>Casa com 3 quartos no Brooklyn</strong></h2>
-                                <hr>
-                            </div>
-                        </header>
-                        <!-- content -->
-                        <div class="main_cardAds_content">
-                            <p>Imóvel Residencial</p>
-                            <p><small>Brooklyn, São Paulo</small></p>
-                            <br>
-                            <p class="price">R$ 300.000,00</p>
-                            <a href="#" class="btn btn-color1 btn-block">Ver Imóvel</a>
-                        </div>
-                        <div class="main_cardAds_content_data">
-                            <!-- dormitory -->
-                            <div class="main_cardAds_content_data_content">
-                                <img src="_cdn/img/vt-dormitory.svg" alt="Vetor Dormitório">
-                                <p>2</p>
-                            </div>
-                            <!-- garage -->
-                            <div class="main_cardAds_content_data_content">
-                                <img src="_cdn/img/vt-garage.svg" alt="Vetor Garagem">
-                                <p>2</p>
-                            </div>
-                            <!-- size -->
-                            <div class="main_cardAds_content_data_content">
-                                <img src="_cdn/img/vt-size.svg" alt="Vetor Metragem">
-                                <p>2</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="main_cardAds_content_button">
-                    <a href="" class="btn btn-color1">veja mais<img src="_cdn/img/vt-plus.svg" alt="Vetor Mais"></a>
-                </div>
-            </div>
-        </section>
-        <!-- pillar -->
-        <section id="main_pillars">
-            <div class="container">
-                <!-- header -->
-                <header class="main_pillars_header">
-                    <h1>KBImob a imobiliária ideal para você<span>!</span></h1>
+                <header class="main_about_header">
+                    <h1>Quem somos!</h1>
                     <hr>
                 </header>
                 <!-- content -->
-                <div class="main_pillars_content">
+                <div class="main_about_content">
                     <div class="row">
-                        <!-- ads -->
-                        <div class="col-sm-4">
-                            <article class="main_pillars_content_card">
-                                <header class="main_pillars_content_card_header">
-                                    <img src="_cdn/img/vt-ads.svg" alt="Vetor Anúncio">
-                                    <h2>Anuncie seu imóvel</h2>
-                                </header>
-                                <div class="main_pillars_content_card_content">
-                                    <p>Anuncie aqui seu imóvel, postaremos em todos os portais com um
-                                        grande alcance do público comprador, e você, terá todo o retorno
-                                        dos clientes e o acompanhamento total de um especialista, com
-                                        dicas pontuais sobre seu imóvel para melhor performance de
-                                        venda.</p>
-                                </div>
-                            </article>
+                        <!-- image -->
+                        <div class="col-lg-5 col-md-6">
+                            <div class="main_about_content_image">
+                                <img src="_cdn/img/img-home.jpg" alt="Imagem Quem Somos">
+                            </div>
                         </div>
-                        <!-- vip -->
-                        <div class="col-sm-4">
-                            <article class="main_pillars_content_card">
-                                <header class="main_pillars_content_card_header">
-                                    <img src="_cdn/img/vt-vip.svg" alt="Vetor VIP">
-                                    <h2>Atendimento VIP</h2>
-                                </header>
-                                <div class="main_pillars_content_card_content">
-                                    <p>Conte para nós todos os detalhes de imóvel que procura, somos uma Imobiliária
-                                        Digital, e com toda a nossa estratégia e trabalho na área de marketing digital,
-                                        encontramos as melhores ações na busca do seu imóvel.</p>
-                                </div>
-                            </article>
-                        </div>
-                        <!-- us -->
-                        <div class="col-sm-4">
-                            <article class="main_pillars_content_card">
-                                <header class="main_pillars_content_card_header">
-                                    <img src="_cdn/img/vt-us.svg" alt="Vetor Imobiliária">
-                                    <h2>A Imobiliária</h2>
-                                </header>
-                                <div class="main_pillars_content_card_content">
-                                    <p>A KBImob com a sua excelência em atendimento e alta performance no seu trabalho,
-                                        nasceu para transformar o sonho do seu imóvel em realidade.</p>
-                                </div>
-                            </article>
+                        <!-- content -->
+                        <div class="col-lg-7 col-md-6">
+                            <div class="main_about_content_text">
+                                <p>'' Respeito, transparência e qualidade, sobre esses 3
+                                    pilares, sustentasse a fundação da
+                                    KBImob.</p>
+                                <br>
+                                <p>Trabalhamos focados sempre, podemos assim, entregar ao
+                                    nosso cliente o melhor em
+                                    atendimento, tanto na busca do imóvel dos seus sonhos, da
+                                    mudança, do investimento, da
+                                    racionalidade, enfim, em todos os motivos, a certeza da
+                                    melhor busca.</p>
+                                <br>
+                                <p>Organizando todas as informações do imóvel que procura, do
+                                    seu momento de vida, do seu
+                                    perfil e, juntando a isso, nossa honestidade, informações
+                                    corretas e transparência,
+                                    entregaremos a você nosso cliente, toda a excelência em
+                                    atendimento e por consequência,
+                                    a busca correta do imóvel e a realização da compra certa!!
+                                </p>
+                                <br>
+                                <p>Por isso, estamos sempre em busca de melhorar, atualizar,
+                                    treinar e capacitar nossos
+                                    especialistas, e poder assim, ter o reconhecimento do
+                                    cliente de um ótimo trabalho."
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <!-- sale -->
-        <section id="main_sale">
-            <div class="container">
-                <!-- header -->
-                <header class="main_sale_header">
-                    <h1>À Venda</h1>
-                    <p>Conheça os nossos imóveis em destaque que estão à venda!</p>
-                </header>
-                <!-- content -->
-                <div class="main_cardAds_content">
-                    <!-- card ads -->
-                    <article class="main_cardAds">
-                        <!-- header -->
-                        <header class="main_cardAds_header">
-                            <img src="_cdn/img/img-example.jpg" class="img-fluid" alt="Imagem Anúncio KBImob">
-                            <div class="main_cardAds_header_container">
-                                <h2><strong>Casa com 3 quartos no Brooklyn</strong></h2>
-                                <hr>
-                            </div>
-                        </header>
-                        <!-- content -->
-                        <div class="main_cardAds_content">
-                            <p>Imóvel Residencial</p>
-                            <p><small>Brooklyn, São Paulo</small></p>
-                            <br>
-                            <p class="price">R$ 300.000,00</p>
-                            <a href="#" class="btn btn-color1 btn-block">Ver Imóvel</a>
-                        </div>
-                        <div class="main_cardAds_content_data">
-                            <!-- dormitory -->
-                            <div class="main_cardAds_content_data_content">
-                                <img src="_cdn/img/vt-dormitory.svg" alt="Vetor Dormitório">
-                                <p>2</p>
-                            </div>
-                            <!-- garage -->
-                            <div class="main_cardAds_content_data_content">
-                                <img src="_cdn/img/vt-garage.svg" alt="Vetor Garagem">
-                                <p>2</p>
-                            </div>
-                            <!-- size -->
-                            <div class="main_cardAds_content_data_content">
-                                <img src="_cdn/img/vt-size.svg" alt="Vetor Metragem">
-                                <p>2</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="main_cardAds_content_button">
-                    <a href="" class="btn btn-color1">veja mais<img src="_cdn/img/vt-plus.svg" alt="Vetor Mais"></a>
-                </div>
-            </div>
-        </section>
-        <!-- hire -->
-        <section id="main_hire">
-            <div class="container">
-                <!-- header -->
-                <header class="main_hire_header">
-                    <h1>Para Alugar</h1>
-                    <p>Conheça os nossos imóveis em destaque que estão para alugar!</p>
-                </header>
-                <!-- content -->
-                <div class="main_cardAds_content">
-                    <!-- card ads -->
-                    <article class="main_cardAds">
-                        <!-- header -->
-                        <header class="main_cardAds_header">
-                            <img src="_cdn/img/img-example.jpg" class="img-fluid" alt="Imagem Anúncio KBImob">
-                            <div class="main_cardAds_header_container">
-                                <h2><strong>Casa com 3 quartos no Brooklyn</strong></h2>
-                                <hr>
-                            </div>
-                        </header>
-                        <!-- content -->
-                        <div class="main_cardAds_content">
-                            <p>Imóvel Residencial</p>
-                            <p><small>Brooklyn, São Paulo</small></p>
-                            <br>
-                            <p class="price">R$ 1.800,00/mês</p>
-                            <a href="#" class="btn btn-color1 btn-block">Ver Imóvel</a>
-                        </div>
-                        <div class="main_cardAds_content_data">
-                            <!-- dormitory -->
-                            <div class="main_cardAds_content_data_content">
-                                <img src="_cdn/img/vt-dormitory.svg" alt="Vetor Dormitório">
-                                <p>2</p>
-                            </div>
-                            <!-- garage -->
-                            <div class="main_cardAds_content_data_content">
-                                <img src="_cdn/img/vt-garage.svg" alt="Vetor Garagem">
-                                <p>2</p>
-                            </div>
-                            <!-- size -->
-                            <div class="main_cardAds_content_data_content">
-                                <img src="_cdn/img/vt-size.svg" alt="Vetor Metragem">
-                                <p>2</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                <div class="main_cardAds_content_button">
-                    <a href="" class="btn btn-color1">veja mais<img src="_cdn/img/vt-plus.svg" alt="Vetor Mais"></a>
                 </div>
             </div>
         </section>
@@ -574,7 +348,7 @@
                     <!-- W3C validator -->
                     <div class="footer_developer_validator">
                         <p>
-                            <a href="https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fwww.kbimob.com.br%2F"
+                            <a href="https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fwww.kbimob.com.br/quem-somos%2F"
                                 target="_blank" title="Tecnologia W3C"><img src="_cdn/img/vt-html.svg"
                                     alt="Vetor W3C Validator">W3C Validator</a>
                         </p>

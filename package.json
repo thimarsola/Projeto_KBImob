@@ -4,7 +4,8 @@
     "description": "Projeto Website KBImob",
     "main": "index.js",
     "scripts": {
-        "start": "sass _cdn/scss/:_cdn/css/ --watch --style=compressed"
+        "start": "sass _cdn/scss/:_cdn/css/ --watch --style=compressed",
+        "server": "browser-sync -f . --server"
     },
     "repository": {
         "type": "git",
