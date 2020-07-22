@@ -1,0 +1,132 @@
+#main_cta {
+    @include margin;
+
+    .main_cta_header {
+        margin-bottom: 2em;
+
+        h1 {
+            @include marginSet;
+            @include font(3em, $font-regular);
+            @include textAlign(justify);
+        }
+
+        hr {
+            margin: 1em 0 0 0;
+            width: 5em;
+            border: 2px solid $color1;
+        }
+    }
+
+    .main_cta_content {
+        .main_cta_content_price {
+            padding: 0;
+            margin-bottom: 1em;
+
+            p {
+                @include marginSet;
+                @include font(2em, $font-regular);
+            }
+        }
+
+        .main_cta_content_code {
+            margin-bottom: 1.75em;
+
+            p {
+                @include marginSet;
+                @include font(1em, $font-regular);
+
+                span {
+                    @include font(inherit, $font-bold);
+                    color: $color1;
+                }
+            }
+        }
+
+        .main_cta_content_place {
+            margin-bottom: 2.75em;
+
+            p {
+                display: flex;
+                align-self: center;
+                @include marginSet;
+                @include font(1.5em, $font-regular);
+
+                img {
+                    margin-right: 1em;
+                }
+            }
+        }
+
+        .main_cta_content_description {
+            @include marginSet;
+
+            .main_cta_content_description_header {
+                margin-bottom: 1em;
+
+                p {
+                    @include marginSet;
+                    @include font(1.125em, $font-bold);
+                }
+            }
+
+            .main_cta_content_description_content {
+                @include marginSet;
+
+                p {
+                    @include marginSet;
+                    @include font(1em, $font-light);
+                    @include textAlign(justify);
+                }
+            }
+        }
+    }
+
+    .main_cta_form {
+        margin: 0;
+        padding: 2em;
+
+        background: {
+            color: $color3;
+        }
+
+        box-shadow: 0 0 15px rgba(#333, .3);
+
+        .main_cta_form_header {
+            margin-bottom: 1.25em;
+
+            p {
+                display: flex;
+                align-self: center;
+                @include marginSet;
+                @include font(1.25em, $font-bold);
+                color: $color5;
+
+                img {
+                    margin-right: 1em;
+                }
+            }
+        }
+
+        form {
+
+            input,
+            textarea,
+            label,
+            input {
+                @include font(.875em, $font-light);
+                color: $color5;
+            }
+
+            .button_form {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    padding: 0.5em 2em;
+                    color: $color3;
+                }
+            }
+
+        }
+    }
+}
