@@ -1,0 +1,56 @@
+#main_pageSale {
+    @include margin;
+    @include background($bg-color1);
+
+    // header
+    .main_pageSale_header {
+        margin-bottom: 3.5em;
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            @include font(2em, $font-regular);
+            @include textAlign(center);
+
+            span {
+                color: $color1;
+
+                font: {
+                    weight: $font-bold;
+                }
+            }
+        }
+
+        hr {
+            margin: 1em auto 1.25em auto;
+            width: 5em;
+            border: 1.5px solid $color1;
+        }
+
+        p {
+            @include marginSet;
+            @include textAlign(center);
+            @include font(1.25em, $font-regular);
+            color: $color4;
+        }
+    }
+
+    @extend %card;
+
+    .main_cardAds_content_button {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        a {
+            margin: 0;
+            padding: 0.5em 2em;
+            color: $color3;
+
+            img {
+                margin-left: 1em;
+            }
+        }
+    }
+}
