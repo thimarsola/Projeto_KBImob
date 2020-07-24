@@ -1,0 +1,49 @@
+#main_ctaImmobile {
+    @include margin;
+
+    background: {
+        color: #F8F8F8;
+    }
+
+    .container {
+        max-width: 52em;
+
+        .main_cta_header {
+            margin-bottom: 1em;
+
+            h1 {
+                margin-bottom: 1.5rem;
+                @include font(2.125em, $font-bold);
+                @include textAlign(center);
+                color: $color5;
+
+                span {
+                    color: $color1;
+                }
+            }
+
+            p {
+                @include marginSet;
+                @include font(1.25em, $font-light);
+                @include textAlign(center);
+                color: $color5;
+            }
+
+        }
+
+        .main_cta_content {
+            @include textAlign(center);
+
+            p {
+                @include marginSet;
+                @include font(1em, $font-light);
+                color: $color5;
+            }
+
+            .btn {
+                margin-top: 2em;
+                color: $color3;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 #main_photos {
-    @include margin;
+    margin: 0;
+    padding: 0 0 5em 0;
 
     .main_photos_header {
         margin-bottom: 3.5em;

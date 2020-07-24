@@ -1,0 +1,45 @@
+#main_architecturalPlan {
+    @include margin;
+
+    .main_architecturalPlan_header {
+        margin-bottom: 4em;
+
+        h1 {
+            @include marginSet;
+            @include font(2.25em, $font-regular);
+            @include textAlign(center);
+        }
+
+        hr {
+            margin: 1em auto 0 auto;
+            width: 4em;
+            border: 1.5px solid $color1;
+        }
+    }
+
+    .main_architecturalPlan_content {
+        width: 100%;
+
+        .main_architecturalPlan_content_grid {
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+
+            .main_architecturalPlan_content_grid_image {
+                @include marginSet;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    object: {
+                        fit: cover;
+                        position: center;
+                    }
+                }
+            }
+        }
+    }
+}

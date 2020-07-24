@@ -32,7 +32,6 @@
             margin: 3em auto 0 0;
         }
     }
-
 }
 
 // mobile
@@ -71,31 +70,76 @@
                         margin: 0;
 
                         p {
-                            @include textAlign(center)
+                            @include textAlign(center);
                         }
-                    }
-                }
-            }
-        }
-
-        // photos
-        #main_photos {
-            .main_photos_content {
-                .main_photos_content_grid {
-                    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)) !important;
-                    background-color: red;
-
-
-                    .main_photos_content_grid_image {
-                        height: 10em;
-                        background-color: red;
                     }
                 }
             }
         }
     }
 
+    // photos
+    #main_photos {
+        .main_photos_content {
+            .main_photos_content_grid {
+                grid-template-columns: repeat(auto-fit,
+                        minmax(150px, 1fr)) !important;
 
+                .main_photos_content_grid_image {
+                    height: 10em !important;
+                }
+            }
+        }
+    }
+
+    // leisure
+    #main_leisure {
+        &::after {
+            width: 100%;
+            height: 1em;
+        }
+
+        .container {
+            .main_leisure_content {
+                ul {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
+
+    // differentials
+    #main_differentials {
+        &::after {
+            width: 100%;
+            height: 1em;
+        }
+
+        .container {
+            .main_differentials_content {
+                ul {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+        }
+    }
 }
 
-@media screen and (max-width: 375px) {}
+@media screen and (max-width: 375px) {
+
+    // photos
+    #main_photos {
+        .main_photos_content {
+            .main_photos_content_grid {
+                grid-template-columns: repeat(auto-fit,
+                        minmax(100px, 1fr)) !important;
+
+                .main_photos_content_grid_image {
+                    height: 10em !important;
+                }
+            }
+        }
+    }
+}

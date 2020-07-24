@@ -1,0 +1,64 @@
+#main_leisure {
+    @include margin;
+    position: relative;
+
+    background: {
+        color: rgba(#F9F9F9, .95);
+    }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "";
+        width: 2.5em;
+        height: 100%;
+        background-color: $color1;
+    }
+
+    .container {
+        padding: 0 2em;
+
+        .main_leisure_header {
+            margin-bottom: 2.5em;
+
+            h1 {
+                @include marginSet;
+                @include font(2.25em, $font-regular);
+            }
+
+            hr {
+                margin: 1em 0 1.25em 0;
+                width: 4em;
+                border: 1.5px solid $color1;
+            }
+
+            p {
+                @include marginSet;
+                @include font(1.125em, $font-light);
+            }
+        }
+
+        .main_leisure_content {
+            @include marginSet;
+
+            ul {
+                display: flex;
+
+                flex: {
+                    direction: row;
+                    wrap: wrap;
+                }
+
+                justify-content: space-between;
+                align-items: center;
+                list-style: inside url('../img/vt-check.svg');
+
+                li {
+                    padding: .5em;
+                    @include textAlign(center);
+                }
+            }
+        }
+    }
+}
