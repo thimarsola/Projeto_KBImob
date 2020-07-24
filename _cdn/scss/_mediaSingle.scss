@@ -57,7 +57,44 @@
         .main_cta_form {
             margin: 2.5em 0;
         }
+
+        // information
+        .main_cta_information {
+            .container {
+                justify-content: center;
+
+                .main_cta_information_card {
+                    flex-flow: column wrap;
+                    flex-basis: 28%;
+
+                    .main_cta_information_card_content {
+                        margin: 0;
+
+                        p {
+                            @include textAlign(center)
+                        }
+                    }
+                }
+            }
+        }
+
+        // photos
+        #main_photos {
+            .main_photos_content {
+                .main_photos_content_grid {
+                    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)) !important;
+                    background-color: red;
+
+
+                    .main_photos_content_grid_image {
+                        height: 10em;
+                        background-color: red;
+                    }
+                }
+            }
+        }
     }
+
 
 }
 

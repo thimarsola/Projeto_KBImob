@@ -129,4 +129,48 @@
 
         }
     }
+
+    .main_cta_information {
+        margin-top: 5em;
+        padding: 4em 0;
+
+        background: {
+            color: #F6F6F6;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .main_cta_information_card {
+                margin: 0.5em;
+                padding: 0.5em;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+
+                .main_cta_information_card_content {
+                    margin-left: 1em;
+
+                    &>p:nth-child(1) {
+                        @include marginSet;
+                        @include font(2em, $font-bold);
+                    }
+
+                    &>p:nth-child(2) {
+                        @include marginSet;
+                        @include font(1.125em, $font-regular);
+                        line-height: 0;
+
+                        small {
+                            @include marginSet;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
