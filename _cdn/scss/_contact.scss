@@ -1,0 +1,88 @@
+#main_contact {
+    @include margin;
+
+    background: {
+        color: $bg-color1;
+    }
+
+    .main_contact_header {
+        margin-bottom: 3em;
+
+        h1 {
+            @include marginSet;
+            @include font(2em, $font-regular);
+            @include textAlign(center);
+
+            text: {
+                transform: uppercase;
+            }
+
+            span {
+                color: $color1;
+            }
+        }
+
+        hr {
+            margin: 1.5rem auto 0 auto;
+            width: 5em;
+            border: 1.5px solid $color1;
+        }
+    }
+
+    .main_contact_content {
+        @include marginSet;
+
+        p {
+            @include marginSet;
+            @include font(1.25rem, $font-regular);
+            @include textAlign(center);
+            color: $color5;
+        }
+
+        .main_contact_content_form {
+            margin: 3.75em auto 0 auto;
+            padding: 2em;
+            max-width: 40em;
+
+            background: {
+                color: $color3;
+            }
+
+            box-shadow: 0 0 10px rgba(#333, .3);
+
+            p {
+                display: flex;
+                align-self: center;
+                @include marginSet;
+                @include font(1.25em, $font-bold);
+                @include textAlign(left);
+
+                img {
+                    margin-right: 0.5em;
+                }
+            }
+
+            form {
+                margin-top: 1.25em;
+
+                input,
+                textarea,
+                label,
+                select {
+                    @include font(.875em, $font-regular);
+                    color: $color5;
+                }
+
+                .button_form {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    button {
+                        padding: 0.5em 2em;
+                        color: $color3;
+                    }
+                }
+            }
+        }
+    }
+}
