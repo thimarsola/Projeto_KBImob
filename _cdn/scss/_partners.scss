@@ -1,0 +1,46 @@
+#main_partners {
+    @include margin;
+
+    background: {
+        color: $bg-color1;
+    }
+
+    .main_partners_header {
+        margin-bottom: 3em;
+
+        h1 {
+            @include marginSet;
+            @include font(2em, $font-regular);
+            @include textAlign(center);
+
+            span {
+                color: $color1;
+            }
+        }
+
+        hr {
+            margin: 1.5rem auto 0 auto;
+            width: 5em;
+            border: 1.5px solid $color1;
+        }
+    }
+
+    .main_partners_content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+
+        .main_partners_content_card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                @include marginSet;
+                max-height: 5em;
+                mix-blend-mode: multiply;
+            }
+        }
+    }
+}

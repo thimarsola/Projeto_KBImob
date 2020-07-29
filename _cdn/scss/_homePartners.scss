@@ -1,0 +1,11 @@
+#main_home {
+    @include marginSet;
+    height: 50vh;
+
+    background: {
+        image: url('../img/bg-parceiros.jpg');
+        position: center;
+        size: cover;
+        repeat: no-repeat;
+    }
+}
