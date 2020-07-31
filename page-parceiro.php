@@ -1,183 +1,10 @@
-<!DOCTYPE html>
-<html lang="pt-BR" itemscope itemtype="https://schema.org/WebSite">
+<?php
+/**
+ * Template Name: Área do corretor
+ */
+?>
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <!-- SCHEMA.ORG -->
-    <meta itemprop="name" content="Imobiliária KBImob | Imobiliária Digital" />
-    <meta itemprop="description" content="Imobiliária KBImob, sua imobiliária Digital" />
-    <meta itemprop="image" content="https://www.kbimob.com.br/_cdn/img/post.jpg" />
-    <meta itemprop="url" content="http://www.kbimob.com.br/" />
-
-    <!-- OPEN GRAPH -->
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:url" content="http://www.kbimob.com.br/" />
-    <meta property="og:title" content="Imobiliária KBImob, sua imobiliária Digita" />
-    <meta property="og:site_name" content="KBImob" />
-    <meta property="og:description" content="Imobiliária KBImob, sua imobiliária Digital" />
-    <meta property="og:image" content="http://www.kbimob.com.br/" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="800" />
-    <meta property="og:image:height" content="600" />
-    <meta property="og:type" content="website" />
-
-    <!--CANONICAL-->
-    <link rel="canonical" href="http://www.kbimob.com.br/" />
-    <link rel="home" href="http://www.kbimob.com.br/" />
-
-    <!-- DESCRIPTION -->
-    <meta name="description" content="Imobiliária KBImob, sua imobiliária Digital" />
-
-    <!-- ROBOTS -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-
-    <!-- AUTHOR -->
-    <meta name="author" content="Goognet Solução Digital - http://www.goognet.com.br" />
-
-    <!-- FACEBOOK -->
-    <meta property="og:url" content="http://www.kbimob.com.br/" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Imobiliária KBImob, sua imobiliária Digital" />
-    <meta property="og:description" content="Imobiliária KBImob, sua imobiliária Digital" />
-    <meta property="og:image" content="http://www.kbimob.com.br/_cdn/img/post.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="article:author" content="https://www.facebook.com/goognetsolucao/" />
-    <meta property="article:publisher" content="https://www.facebook.com/goognetsolucao/" />
-
-    <!-- TWITTER -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:domain" content="http://www.kbimob.com.br/" />
-    <meta name="twitter:title" content="Imobiliária KBImob, sua imobiliária Digital" />
-    <meta name="twitter:description" content="Imobiliária KBImob, sua imobiliária Digital" />
-    <meta name="twitter:image" content="http://www.kbimob.com.br/_cdn/img/post.jpg" />
-    <meta name="twitter:url" content="http://www.kbimob.com.br/" />
-
-    <!-- REGION -->
-    <meta name="geo.region" content="BR-SP" />
-    <meta name="geo.placename" content="S&atilde;o Paulo" />
-    <meta name="geo.position" content="-23.60626;-46.627191" />
-    <meta name="ICBM" content="-23.60626, -46.627191" />
-
-    <!-- FAVICON -->
-    <link rel="shortcut icon" href="_cdn/img/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="57x57" href="_cdn/img/favicon/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="_cdn/img/favicon/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="_cdn/img/favicon/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="_cdn/img/favicon/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="_cdn/img/favicon/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="_cdn/img/favicon/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="_cdn/img/favicon/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="_cdn/img/favicon/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="_cdn/img/favicon/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="_cdn/img/favicon/android-icon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="_cdn/img/favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="_cdn/img/favicon/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="_cdn/img/favicon/favicon-16x16.png" />
-    <link rel="manifest" href="_cdn/img/favicon/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="_cdn/img/favicon/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
-
-    <!--CSS-->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="_cdn/css/stylePartners.css" />
-
-    <!--TITLE-->
-    <title>Imobiliária KBImob, sua imobiliária Digital</title>
-</head>
-
-<body id="home">
-    <!--HEADER-->
-    <header id="header">
-        <!-- navbar information -->
-        <div class="header_nav">
-            <div class="container">
-                <div class="row">
-                    <!-- place -->
-                    <div class="col-sm-3">
-                        <div class="header_nav_card">
-                            <img src="_cdn/img/vt-local.svg" alt="Vetor Local" class="header-nav-image" />
-                            <p>
-                                <a href="https://goo.gl/maps/bR3V67qW9mTvzcBK8">Av. Paulista, 1439 - Cj 41|42<br />São
-                                    Paulo - SP</a>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- hours -->
-                    <div class="col-sm-3">
-                        <div class="header_nav_card">
-                            <img src="_cdn/img/vt-time.svg" alt="Vetor Horário" class="header-nav-image" />
-                            <p>Seg/Dom: 09:00h - 21:00h</p>
-                        </div>
-                    </div>
-                    <!-- whatsapp -->
-                    <div class="col-sm-3">
-                        <div class="header_nav_card">
-                            <img src="_cdn/img/vt-whatsapp.svg" alt="Vetor Whatsapp" class="header-nav-image" />
-                            <p>
-                                <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511963840832">(11) 96384-0832</a>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- whatsapp -->
-                    <div class="col-sm-3">
-                        <div class="header_nav_card">
-                            <img src="_cdn/img/vt-phone.svg" alt="Vetor Telefone" class="header-nav-image" />
-                            <p>
-                                <a href="tel:1155944278">(11) 5594-4278</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-bg-color3">
-            <div class="container">
-                <a href="#">
-                    <img src="_cdn/img/logo-header.svg" class="img-fluid" alt="Logo KBImob" />
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#quem-somos">Quem somos</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="categorias" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">Imóveis</a>
-                            <div class="dropdown-menu" aria-labelledby="categorias">
-                                <a class="dropdown-item" href="#">Comprar</a>
-                                <a class="dropdown-item" href="#">Alugar</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Área do Corretor</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+<?php get_header(); ?>
 
     <!--MAIN-->
     <main class="main">
@@ -205,7 +32,7 @@
                         <div class="col-sm-7">
                             <div class="main_contact_content_form">
                                 <p>
-                                    <img src="_cdn/img/vt-mail.svg" alt="Vetor KBImob" />Cadastre-se
+                                    <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-mail.svg" alt="Vetor KBImob" />Cadastre-se
                                 </p>
                                 <form>
                                     <!-- name -->
@@ -246,7 +73,7 @@
                             </div>
                         </div>
                         <div class="col-sm-5">
-                            <img src="_cdn/img/img-parceiro.jpg" alt="Imagem parceiro KBImob" class="img-fluid">
+                            <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-parceiro.jpg" alt="Imagem parceiro KBImob" class="img-fluid">
                         </div>
                     </div>
                 </div>
@@ -263,28 +90,28 @@
                 <!-- content -->
                 <div class="main_partners_content">
                     <!-- card -->
-                    <div class="main_partners_content_card"><img src="_cdn/img/img-cyrela.jpg" alt="Parceiros KBImob"
+                    <div class="main_partners_content_card"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-cyrela.jpg" alt="Parceiros KBImob"
                             class="img-fluid"></div>
                     <!-- card -->
-                    <div class="main_partners_content_card"><img src="_cdn/img/img-trisul.jpg" alt="Parceiros KBImob"
+                    <div class="main_partners_content_card"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-trisul.jpg" alt="Parceiros KBImob"
                             class="img-fluid"></div>
                     <!-- card -->
-                    <div class="main_partners_content_card"><img src="_cdn/img/img-gamaro.png" alt="Parceiros KBImob"
+                    <div class="main_partners_content_card"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-gamaro.png" alt="Parceiros KBImob"
                             class="img-fluid"></div>
                     <!-- card -->
-                    <div class="main_partners_content_card"><img src="_cdn/img/img-vitacon.jpg" alt="Parceiros KBImob"
+                    <div class="main_partners_content_card"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-vitacon.jpg" alt="Parceiros KBImob"
                             class="img-fluid"></div>
                     <!-- card -->
-                    <div class="main_partners_content_card"><img src="_cdn/img/img-mitre.jpg" alt="Parceiros KBImob"
+                    <div class="main_partners_content_card"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-mitre.jpg" alt="Parceiros KBImob"
                             class="img-fluid"></div>
                     <!-- card -->
-                    <div class="main_partners_content_card"><img src="_cdn/img/img-mdl.jpg" alt="Parceiros KBImob"
+                    <div class="main_partners_content_card"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-mdl.jpg" alt="Parceiros KBImob"
                             class="img-fluid"></div>
                     <!-- card -->
-                    <div class="main_partners_content_card"><img src="_cdn/img/img-barbara.jpg" alt="Parceiros KBImob"
+                    <div class="main_partners_content_card"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-barbara.jpg" alt="Parceiros KBImob"
                             class="img-fluid"></div>
                     <!-- card -->
-                    <div class="main_partners_content_card"><img src="_cdn/img/img-ideal.jpg" alt="Parceiros KBImob"
+                    <div class="main_partners_content_card"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-ideal.jpg" alt="Parceiros KBImob"
                             class="img-fluid"></div>
                 </div>
             </div>
@@ -306,7 +133,7 @@
                                 <!-- header -->
                                 <header class="main_information_content_article_header">
                                     <h2>
-                                        <img src="_cdn/img/vt-mail.svg" alt="Vetor KBImob" />Envie um e-mail
+                                        <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-mail.svg" alt="Vetor KBImob" />Envie um e-mail
                                     </h2>
                                 </header>
                                 <!-- content -->
@@ -325,7 +152,7 @@
                                 <!-- header -->
                                 <header class="main_information_content_article_header">
                                     <h2>
-                                        <img src="_cdn/img/vt-phone-2.svg" alt="Vetor KBImob" />Por telefone
+                                        <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-phone-2.svg" alt="Vetor KBImob" />Por telefone
                                     </h2>
                                 </header>
                                 <!-- content -->
@@ -344,7 +171,7 @@
                                 <!-- header -->
                                 <header class="main_information_content_article_header">
                                     <h2>
-                                        <img src="_cdn/img/vt-whatsapp-3.svg" alt="Vetor KBImob" />Por whatsapp
+                                        <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-whatsapp-3.svg" alt="Vetor KBImob" />Por whatsapp
                                     </h2>
                                 </header>
                                 <!-- content -->
@@ -364,7 +191,7 @@
                                 <!-- header -->
                                 <header class="main_information_content_article_header">
                                     <h2>
-                                        <img src="_cdn/img/vt-media.svg" alt="Vetor KBImob" />Redes Sociais
+                                        <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-media.svg" alt="Vetor KBImob" />Redes Sociais
                                     </h2>
                                 </header>
                                 <!-- content -->
@@ -374,13 +201,13 @@
                                         compartilha em nossas redes sociais!
                                     </p>
                                     <a href="https://www.facebook.com/kalila.carla" target="_blank"><img
-                                            src="_cdn/img/vt-facebook.svg" alt="Vetor Facebook" /></a>
+                                            src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-facebook.svg" alt="Vetor Facebook" /></a>
 
                                     <a href="https://www.linkedin.com/in/kalila-carla-324b51147" target="_blank"><img
-                                            src="_cdn/img/vt-linkedin.svg" alt="Vetor LinkedIn" /></a>
+                                            src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-linkedin.svg" alt="Vetor LinkedIn" /></a>
 
                                     <a href="https://instagram.com/kalilacarla?igshid=1pr3ruvvjtpsx"
-                                        target="_blank"><img src="_cdn/img/vt-instagram.svg"
+                                        target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-instagram.svg"
                                             alt="Vetor Instagram" /></a>
                                 </div>
                             </article>
@@ -480,16 +307,16 @@
                             <div class="main_realState_content_media">
                                 <div class="main_realState_content_media_container">
                                     <a href="https://www.facebook.com/kalila.carla" target="_blank"><img
-                                            src="_cdn/img/vt-facebook.svg" alt="Vetor Facebook" /></a>
+                                            src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-facebook.svg" alt="Vetor Facebook" /></a>
 
                                     <a href="https://www.linkedin.com/in/kalila-carla-324b51147" target="_blank"><img
-                                            src="_cdn/img/vt-linkedin.svg" alt="Vetor LinkedIn" /></a>
+                                            src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-linkedin.svg" alt="Vetor LinkedIn" /></a>
 
                                     <a href="https://instagram.com/kalilacarla?igshid=1pr3ruvvjtpsx"
-                                        target="_blank"><img src="_cdn/img/vt-instagram.svg"
+                                        target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-instagram.svg"
                                             alt="Vetor Instagram" /></a>
                                     <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511963840832"
-                                        target="_blank"><img src="_cdn/img/vt-whatsapp-2.svg"
+                                        target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-whatsapp-2.svg"
                                             alt="Vetor WhatsApp" /></a>
                                 </div>
                             </div>
@@ -500,47 +327,4 @@
         </section>
     </main>
 
-    <!-- footer -->
-    <footer id="footer">
-        <div class="footer_copyright">
-            <div class="container">
-                <hr />
-                <div class="footer_copyright_content">
-                    <img src="_cdn/img/logo-footer.svg" alt="Logo" />
-                    <p>Todos os direitos reservados - CRECI 43072-J</p>
-                </div>
-            </div>
-        </div>
-        <!-- developer -->
-        <div class="footer_developer">
-            <div class="container">
-                <div class="footer_developer_container">
-                    <!-- goognet -->
-                    <div class="footer_developer_goognet">
-                        <p>
-                            Desenvolvido por:
-                            <strong><a href="http://www.goognet.com.br" title="Desenvolvido por Goognet Solução Digital"
-                                    target="_blank">Goognet Solução Digital</a></strong>
-                        </p>
-                    </div>
-                    <!-- W3C validator -->
-                    <div class="footer_developer_validator">
-                        <p>
-                            <a href="https://validator.w3.org/nu/?showsource=yes&showoutline=yes&showimagereport=yes&doc=https%3A%2F%2Fwww.kbimob.com.br/contato%2F"
-                                target="_blank" title="Tecnologia W3C"><img src="_cdn/img/vt-html.svg"
-                                    alt="Vetor W3C Validator" />W3C Validator</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- SCRIPTS -->
-    <script src="_cdn/js/jquery.min.js"></script>
-    <script src="_cdn/js/bootstrap.bundle.min.js"></script>
-    <script src="_cdn/js/main.js"></script>
-    <script src="_cdn/js/lightbox.min.js"></script>
-</body>
-
-</html>
+<?php get_footer(); ?>
