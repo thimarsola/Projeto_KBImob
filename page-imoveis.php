@@ -96,83 +96,62 @@
                 <div class="col-sm-8">
                     <!-- content -->
                     <div class="main_cardAds_content">
-                        <!-- card ads -->
-                        <article class="main_cardAds">
-                            <!-- header -->
-                            <header class="main_cardAds_header">
-                                <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-example.jpg"
-                                    class="img-fluid" alt="Imagem Anúncio KBImob" />
-                                <div class="main_cardAds_header_container">
-                                    <h2>
-                                        <strong>Casa com 3 quartos no
-                                            Brooklyn</strong>
-                                    </h2>
-                                    <hr />
-                                </div>
-                            </header>
-                            <!-- content -->
-                            <div class="main_cardAds_content">
-                                <p>Imóvel Residencial</p>
-                                <p><small>Brooklyn, São Paulo</small></p>
-                                <br />
-                                <p class="price">R$ 300.000,00</p>
-                                <a href="#" class="btn btn-color1 btn-block">Ver Imóvel</a>
-                            </div>
-                            <div class="main_cardAds_content_data">
-                                <!-- dormitory -->
-                                <div class="main_cardAds_content_data_content">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-dormitory.svg"
-                                        alt="Vetor Dormitório" />
-                                    <p>2</p>
-                                </div>
-                                <!-- garage -->
-                                <div class="main_cardAds_content_data_content">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-garage.svg"
-                                        alt="Vetor Garagem" />
-                                    <p>2</p>
-                                </div>
-                                <!-- size -->
-                                <div class="main_cardAds_content_data_content">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-size.svg"
-                                        alt="Vetor Metragem" />
-                                    <p>2</p>
-                                </div>
-                            </div>
-                        </article>
+                        <?php
+                        $paged = ( get_query_var('paged') ) ? absint(get_query_var('paged')) : 1;
+
+                        $arg_category = [
+                            'posts_per_page' => 9,
+                            'post_type' => 'imovel',
+                            'paged' => $paged,
+                        ];
+                        ?>
+                        <?php
+                        // the query
+                        $the_query = new WP_Query($arg_category);
+                        ?>
+
+                        <?php if ($the_query->have_posts()) : ?>
+                            <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                                <?php get_template_part('template-parts/content', 'card'); ?>
+                            <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>
+
+                        <?php else : ?>
+                            <p><?php _e('Não existem imóveis cadastrados para esta categoria no momento.'); ?></p>
+                        <?php endif; ?>
                     </div>
                     <!-- pagination -->
                     <div class="main_auctions_pagination mt-5">
                         <nav>
 
                             <?php
-                                $big = 999999999; // need an unlikely integer
+                            $big = 999999999; // need an unlikely integer
 
-                                $pages = pagination(
+                            $pages = pagination(
                                     [
-                                        'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+                                        'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
                                         'format' => '?paged=%#%',
-                                        'current' => max( 1, get_query_var('paged') ),
+                                        'current' => max(1, get_query_var('paged')),
                                         'total' => $the_query->max_num_pages,
                                         'prev_text' => '<',
                                         'next_text' => '>',
                                         'type' => 'array',
                                     ]
-                                );
+                            );
 
-                                if( is_array( $pages ) ) {
+                            if (is_array($pages)) {
 
-                                    echo '<ul class="pagination justify-content-center">';
-                                    foreach ( $pages as $page ) {
-                                        echo "<li class='page-item'>$page</li>";
-                                    }
-                                    echo '</ul>';
+                                echo '<ul class="pagination justify-content-center">';
+                                foreach ($pages as $page) {
+                                    echo "<li class='page-item'>$page</li>";
                                 }
-                                ?>
+                                echo '</ul>';
+                            }
+                            ?>
                         </nav>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- cta form -->
@@ -199,7 +178,7 @@
                     <!-- input -->
                     <div class="form-group">
                         <input id="inputEscolha" class="form-control" type="email"
-                            placeholder="Digite seu melhor e-mail" />
+                               placeholder="Digite seu melhor e-mail" />
                     </div>
                     <!-- button -->
                     <div class="main_ctaForm_content_button">
