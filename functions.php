@@ -7,11 +7,11 @@ function loadScripts()
     wp_enqueue_style('font', 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap', [], '1.0.0', 'all');
     if (is_home()) {
         wp_enqueue_style('styleMain', get_template_directory_uri() . '/_cdn/css/styleMain.css', [], '1.0.0', 'all');
-    } else if (is_page('Quem somos')) {
+    } else if (is_page('quem-somos')) {
         wp_enqueue_style('styleAbout', get_template_directory_uri() . '/_cdn/css/styleAbout.css', [], '1.0.0', 'all');
-    } else if (is_page('Área do corretor')) {
+    } else if (is_page('area-do-corretor')) {
         wp_enqueue_style('stylePartners', get_template_directory_uri() . '/_cdn/css/stylePartners.css', [], '1.0.0', 'all');
-    } else if (is_page(['Imóveis', 'Venda', 'Aluguel'])) {
+    } else if (is_page(['imoveis', 'venda', 'aluguel']) || is_search() || is_archive('imovel')) {
         wp_enqueue_style('stylePage', get_template_directory_uri() . '/_cdn/css/stylePage.css', [], '1.0.0', 'all');
     } else if (is_singular('imovel')) {
         wp_enqueue_style('styleSingle', get_template_directory_uri() . '/_cdn/css/styleSingle.css', [], '1.0.0', 'all');
@@ -228,6 +228,7 @@ function googleMaps($api)
 
 add_filter('acf/fields/google_map/api', 'googleMaps');
 
+add_theme_support('post-thumbnails');
 
 // //CREATE SEARCH FORM
 // register_sidebar(

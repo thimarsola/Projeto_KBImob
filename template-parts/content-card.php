@@ -1,7 +1,7 @@
 <article class="main_cardAds">
     <!-- header -->
     <header class="main_cardAds_header">
-        <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/img-example.jpg" class="img-fluid"
+        <img src="<?php the_post_thumbnail_url(); ?>" class="img-fluid""
              alt="Imagem Anúncio KBImob" />
         <div class="main_cardAds_header_container">
             <h2>
@@ -13,27 +13,24 @@
     <!-- content -->
     <div class="main_cardAds_content">
         <?php
-        $types = get_terms('tipo');
-
-        foreach ($types as $type) {
-
-        }
+        $type = get_the_terms($post, 'tipo');
+        $typeName = join(', ', wp_list_pluck($type, 'name'));
         ?>
-        <p><?php echo $type->name; ?></p>
+        <p><?= $typeName; ?></p>
         <p><small><?php the_field('localizacao_do_imovel'); ?></small></p>
         <br />
+
         <?php
-        $models = get_terms('modelo');
+        $model = get_the_terms($post, 'modelo');
+        $modelName = join(', ', wp_list_pluck($model, 'name'));
 
-        foreach ($models as $model) {
-
-        }
-        if ($model->name == 'Venda') {
+        if ($modelName == 'Venda') {
             echo '<p class="price">R$ ' . number_format(get_field('valor_do_imovel'), 2, ',', '.') . '</p>';
         } else {
             echo '<p class="price">R$ ' . number_format(get_field('valor_do_imovel'), 2, ',', '.') . '/mês</p>';
         }
         ?>
+
         <a href="<?php echo get_permalink(); ?>" class="btn btn-color1 btn-block" target="_blank">Ver Imóvel</a>
     </div>
     <div class="main_cardAds_content_data">

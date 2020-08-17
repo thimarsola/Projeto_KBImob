@@ -14,8 +14,16 @@
                     <!-- price -->
                     <div class="main_cta_content_price">
                         <?php
-                        echo "<p>R$" . number_format(get_field('valor_do_imovel'), 2, ',', '.') . "</p>";
+                        $model = get_the_terms($post, 'modelo');
+                        $modelName = join(', ', wp_list_pluck($model, 'name'));
+
+                        if ($modelName == 'Venda') {
+                            echo '<p>R$ ' . number_format(get_field('valor_do_imovel'), 2, ',', '.') . '</p>';
+                        } else {
+                            echo '<p>R$ ' . number_format(get_field('valor_do_imovel'), 2, ',', '.') . '/mês</p>';
+                        }
                         ?>
+
                     </div>
                     <!-- code -->
                     <div class="main_cta_content_code">
@@ -189,67 +197,80 @@
     </div>
 </section>
 <!-- leisure and service -->
-<section id="main_leisure">
-    <div class="container">
-        <!-- header -->
-        <header class="main_leisure_header">
-            <h1>Lazer & Serviços</h1>
-            <hr />
-            <p>Veja abaixo os grandes diferenciais deste imóvel</p>
-        </header>
-        <!-- content -->
-        <div class="main_leisure_content">
-            <?php
-            $listLeisure = explode(",", get_field('lazer_e_servicos'));
-            if ($listLeisure):
-                ?>
-                <ul>
-                    <?php foreach ($listLeisure as $keyLeisure): ?>
-                        <li><?= $keyLeisure; ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+<?php
+$leisure = get_field('lazer_e_servicos');
+if ($leisure != null):
+    ?>
+
+    <section id="main_leisure">
+        <div class="container">
+            <!-- header -->
+            <header class="main_leisure_header">
+                <h1>Lazer & Serviços</h1>
+                <hr />
+                <p>Veja abaixo os grandes diferenciais deste imóvel</p>
+            </header>
+            <!-- content -->
+            <div class="main_leisure_content">
+                <?php
+                $listLeisure = explode(",", get_field('lazer_e_servicos'));
+                if ($listLeisure):
+                    ?>
+                    <ul>
+                        <?php foreach ($listLeisure as $keyLeisure): ?>
+                            <li><?= $keyLeisure; ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
+
 <!-- differentials -->
-<section id="main_differentials">
-    <div class="container">
-        <!-- header -->
-        <header class="main_differentials_header">
-            <h1>Diferenciais</h1>
-            <hr />
-            <p>Veja abaixo os grandes diferenciais deste imóvel</p>
-        </header>
-        <!-- content -->
-        <div class="main_differentials_content">
-            <?php
-            $listDifferentials = explode(",", get_field('diferenciais'));
-            if ($listDifferentials):
-                ?>
-                <ul>
-                    <?php foreach ($listDifferentials as $keyDifferentials): ?>
-                        <li><?= $keyDifferentials; ?></li>
-                    <?php endforeach; ?>
-                </ul>
-            <?php endif; ?>
+<?php
+$differentials = get_field('diferenciais');
+if ($differentials != null):
+    ?>
+    <section id="main_differentials">
+        <div class="container">
+            <!-- header -->
+            <header class="main_differentials_header">
+                <h1>Diferenciais</h1>
+                <hr />
+                <p>Veja abaixo os grandes diferenciais deste imóvel</p>
+            </header>
+            <!-- content -->
+            <div class="main_differentials_content">
+                <?php
+                $listDifferentials = explode(",", get_field('diferenciais'));
+                if ($listDifferentials):
+                    ?>
+                    <ul>
+                        <?php foreach ($listDifferentials as $keyDifferentials): ?>
+                            <li><?= $keyDifferentials; ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
+
 <!-- architectural plan -->
-<section id="main_architecturalPlan">
-    <div class="container">
-        <!-- header -->
-        <header class="main_architecturalPlan_header">
-            <h1>Plantas</h1>
-            <hr />
-        </header>
-        <!-- content -->
-        <div class="main_architecturalPlan_content">
-            <?php
-            $architecturalPlan = get_field('plantas');
-            if ($architecturalPlan != null):
-                ?>
+<?php
+$architecturalPlan = get_field('plantas');
+if ($architecturalPlan != null):
+    ?>
+    <section id="main_architecturalPlan">
+        <div class="container">
+            <!-- header -->
+            <header class="main_architecturalPlan_header">
+                <h1>Plantas</h1>
+                <hr />
+            </header>
+            <!-- content -->
+            <div class="main_architecturalPlan_content">
                 <div class="main_architecturalPlan_content_grid">
                     <?php foreach ($architecturalPlan as $keyArchitecturalPlan): ?>
                         <!-- architectural plan -->
@@ -258,12 +279,11 @@
                         </div>
                     <?php endforeach; ?>
                 </div>
-            <?php else: ?>
-                <p class="text-center">Desculpe, mas este imóvel não possui planta cadastrada no nosso sistema.</p>
-            <?php endif; ?>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
+
 <!-- location -->
 <section id="main_location">
     <div class="container">
@@ -281,7 +301,7 @@
                 <div class="acf-map" data-zoom="16">
                     <div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
                 </div>
-<?php endif; ?>
+            <?php endif; ?>
         </div>
     </div>
 </section>

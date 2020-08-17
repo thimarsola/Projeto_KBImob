@@ -25,44 +25,7 @@
     <div id="main_search">
         <div class="container">
             <!-- form -->
-            <form>
-                <div class="form-row">
-                    <!-- Escolha -->
-                    <div class="form-group col-md-3">
-                        <label for="inputEscolha">Comprar ou Alugar?</label>
-                        <select id="inputEscolha" class="form-control">
-                            <option selected>Escolha...</option>
-                            <option>Comprar</option>
-                            <option>Alugar</option>
-                        </select>
-                    </div>
-                    <!-- Status -->
-                    <div class="form-group col-md-3">
-                        <label for="inputStatus">Status</label>
-                        <select id="inputStatus" class="form-control">
-                            <option selected>Escolha...</option>
-                        </select>
-                    </div>
-                    <!-- Tipo -->
-                    <div class="form-group col-md-3">
-                        <label for="inputTipo">Qual o tipo de imóvel?</label>
-                        <select id="inputTipo" class="form-control">
-                            <option selected>Escolha...</option>
-                        </select>
-                    </div>
-                    <!-- Localização -->
-                    <div class="form-group col-md-3">
-                        <label for="inputLocalizacao">Qual a localização?</label>
-                        <select id="inputLocalizacao" class="form-control">
-                            <option selected>Escolha...</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="main_search_button">
-                    <button type="submit" class="btn btn-color1"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-search.svg"
-                                                                      alt="Vetor Pesquisa">Pesquisar</button>
-                </div>
-            </form>
+            <?php get_search_form(); ?>
         </div>
     </div>
     <!-- spotlight -->

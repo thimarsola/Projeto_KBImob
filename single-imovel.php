@@ -33,7 +33,7 @@
                     formulário, entraremos em contato o mais breve
                     possível!
                 </p>
-                <a href="#form" class="btn btn-color1">Preencher formulário</a>
+                <a href="#home" class="btn btn-color1">Preencher formulário</a>
             </div>
         </div>
     </section>

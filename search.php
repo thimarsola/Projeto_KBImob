@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+
 <!--MAIN-->
 <main class="main">
     <!-- home -->
@@ -10,7 +11,7 @@
         <div class="container">
             <!-- header -->
             <header class="main_pageImmobile_header">
-                <h1>Conheça os nossos <span>Imóveis!</span></h1>
+                <h1>Seu imóvel com o seu <span>estilo</span></h1>
                 <hr />
                 <p>Veja abaixo os nossos imóveis!</p>
             </header>
@@ -18,22 +19,80 @@
                 <!-- filter -->
                 <div class="col-sm-4">
                     <aside id="main_pageImmobile_filter">
-                        <p><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-filter.svg"
-                                alt="Vetor KBImob" />Filtro</p>
-                            <?php get_search_form(); ?>
+                        <p><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-filter.svg" alt="Vetor KBImob" />Filtro</p>
+                        <?php get_search_form(); ?>
                     </aside>
                 </div>
                 <div class="col-sm-8">
                     <!-- content -->
                     <div class="main_cardAds_content">
                         <?php
+                        $postType = get_query_var('post_type');
+                        $regiao = $_GET['regiao'];
+                        $status = $_GET['status'];
+                        $tipo = $_GET['tipo'];
+                        $modelo = $_GET['modelo'];
+
                         $paged = ( get_query_var('paged') ) ? absint(get_query_var('paged')) : 1;
 
                         $arg_category = [
                             'posts_per_page' => 9,
-                            'post_type' => 'imovel',
+                            'post_type' => $postType,
                             'paged' => $paged,
                         ];
+
+                        if (!empty($modelo) || !empty($status) || !empty($tipo) || !empty($regiao)) {
+                            $arg_category['tax_query'] = [
+                                'relation' => 'AND',
+                                [
+                                    'taxonomy' => 'modelo',
+                                    'field' => 'slug',
+                                    'terms' => $modelo
+                                ],
+                                [
+                                    'taxonomy' => 'status',
+                                    'field' => 'slug',
+                                    'terms' => $status
+                                ],
+                                [
+                                    'taxonomy' => 'tipo',
+                                    'field' => 'slug',
+                                    'terms' => $tipo
+                                ],
+                                [
+                                    'taxonomy' => 'regiao',
+                                    'field' => 'slug',
+                                    'terms' => $regiao
+                                ]
+                            ];
+                        }
+
+                        $dormitorio = $_GET['dormitorio'];
+                        $suite = $_GET['suite'];
+                        $banheiro = $_GET['banheiro'];
+                        $garagem = $_GET['garagem'];
+
+                        if (!empty($dormitorio) || !empty($suite) || !empty($banheiro) || !empty($garagem)) {
+                            $arg_category['meta_query'] = [
+                                'relation' => 'AND',
+                                [
+                                    'key' => 'dormitorio',
+                                    'value' => $dormitorio
+                                ],
+                                [
+                                    'key' => 'suite',
+                                    'value' => $suite
+                                ],
+                                [
+                                    'key' => 'banheiro',
+                                    'value' => $banheiro
+                                ],
+                                [
+                                    'key' => 'garagem',
+                                    'value' => $garagem
+                                ]
+                            ];
+                        }
                         ?>
                         <?php
                         // the query
@@ -47,7 +106,7 @@
                             <?php wp_reset_postdata(); ?>
 
                         <?php else : ?>
-                            <p><?php _e('Não existem imóveis cadastrados para esta categoria no momento.'); ?></p>
+                            <p class="text-center"><?php _e('Não foram encontrados imóveis com esses requisitos'); ?></p>
                         <?php endif; ?>
                     </div>
                     <!-- pagination -->
@@ -82,6 +141,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- cta form -->
@@ -175,19 +235,17 @@
                         <div class="main_realState_content_media">
                             <div class="main_realState_content_media_container">
                                 <a href="https://www.facebook.com/kalila.carla" target="_blank"><img
-                                        src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-facebook.svg"
-                                        alt="Vetor Facebook" /></a>
+                                        src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-facebook.svg" alt="Vetor Facebook" /></a>
 
                                 <a href="https://www.linkedin.com/in/kalila-carla-324b51147" target="_blank"><img
-                                        src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-linkedin.svg"
-                                        alt="Vetor LinkedIn" /></a>
+                                        src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-linkedin.svg" alt="Vetor LinkedIn" /></a>
 
-                                <a href="https://instagram.com/kalilacarla?igshid=1pr3ruvvjtpsx" target="_blank"><img
-                                        src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-instagram.svg"
-                                        alt="Vetor Instagram" /></a>
-                                <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511963840832" target="_blank"><img
-                                        src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-whatsapp-2.svg"
-                                        alt="Vetor WhatsApp" /></a>
+                                <a href="https://instagram.com/kalilacarla?igshid=1pr3ruvvjtpsx"
+                                   target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-instagram.svg"
+                                                     alt="Vetor Instagram" /></a>
+                                <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511963840832"
+                                   target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-whatsapp-2.svg"
+                                                     alt="Vetor WhatsApp" /></a>
                             </div>
                         </div>
                     </div>

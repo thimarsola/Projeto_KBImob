@@ -1,9 +1,3 @@
-<?php
-/**
- * Template Name: Aluguel
- */
-?>
-
 <?php get_header(); ?>
 
 
@@ -26,70 +20,7 @@
                 <div class="col-sm-4">
                     <aside id="main_pageImmobile_filter">
                         <p><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-filter.svg" alt="Vetor KBImob" />Filtro</p>
-                        <form>
-                            <!-- choice -->
-                            <div class="form-group">
-                                <label for="formChoice">Comprar ou Alugar?</label>
-                                <select class="form-control" id="formChoice">
-                                    <option>Escolha...</option>
-                                </select>
-                            </div>
-                            <!-- status -->
-                            <div class="form-group">
-                                <label for="formStatus">Status</label>
-                                <select class="form-control" id="formStatus">
-                                    <option>Escolha...</option>
-                                </select>
-                            </div>
-                            <!-- type -->
-                            <div class="form-group">
-                                <label for="formType">Qual o tipo de imóvel?</label>
-                                <select class="form-control" id="formType">
-                                    <option>Escolha...</option>
-                                </select>
-                            </div>
-                            <!-- location -->
-                            <div class="form-group">
-                                <label for="formLocation">Qual a localização?</label>
-                                <select class="form-control" id="formLocation">
-                                    <option>Escolha...</option>
-                                </select>
-                            </div>
-                            <!-- bedroom -->
-                            <div class="form-group">
-                                <label for="formBedroom">Dormitórios</label>
-                                <select class="form-control" id="formBedroom">
-                                    <option>Escolha...</option>
-                                </select>
-                            </div>
-                            <!-- suite -->
-                            <div class="form-group">
-                                <label for="formSuite">Suítes</label>
-                                <select class="form-control" id="formSuite">
-                                    <option>Escolha...</option>
-                                </select>
-                            </div>
-                            <!-- bathroom -->
-                            <div class="form-group">
-                                <label for="formBathroom">Banheiros</label>
-                                <select class="form-control" id="formBathroom">
-                                    <option>Escolha...</option>
-                                </select>
-                            </div>
-                            <!-- garage -->
-                            <div class="form-group">
-                                <label for="formGarage">Garagem</label>
-                                <select class="form-control" id="formGarage">
-                                    <option>Escolha...</option>
-                                </select>
-                            </div>
-                            <!-- button -->
-                            <div class="formButton">
-                                <button type="submit" class="btn btn-color1"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-search.svg"
-                                                                                  alt="Vetor Pesquisa">Pesquisar</button>
-                            </div>
-
-                        </form>
+                        <?php get_search_form(); ?>
                     </aside>
                 </div>
                 <div class="col-sm-8">
