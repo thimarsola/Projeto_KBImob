@@ -56,60 +56,7 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-mail.svg" alt="Vetor e-mail" />Fale conosco
                         </p>
                     </header>
-                    <form action="#">
-                        <!-- code -->
-                        <div class="form-group">
-                            <input id="code" type="text" class="form-control" value="IM001" size="35"
-                                   maxlength="100" disabled />
-                        </div>
-                        <!-- name -->
-                        <div class="form-group">
-                            <input id="name" type="text" class="form-control" placeholder="Insira seu nome"
-                                   size="35" maxlength="100" required />
-                        </div>
-                        <!-- mail -->
-                        <div class="form-group">
-                            <input id="mail" type="email" class="form-control"
-                                   placeholder="Insira seu melhor e-mail" size="35" maxlength="70" required />
-                        </div>
-                        <!-- phone -->
-                        <div class="form-group">
-                            <input id="phone" type="tel" class="form-control"
-                                   placeholder="Insira seu telefone com DDD..." size="35" maxlength="70"
-                                   required />
-                        </div>
-                        <!-- contact -->
-                        <label for="checkForm">Como deseja ser contatado?</label>
-                        <div id="checkForm" class="form-group">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                       value="Ligação" />
-                                <label class="form-check-label" for="inlineCheckbox1">Ligação</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2"
-                                       value="WhatsApp" />
-                                <label class="form-check-label" for="inlineCheckbox2">WhatsApp</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3"
-                                       value="E-mail" />
-                                <label class="form-check-label" for="inlineCheckbox3">E-mail</label>
-                            </div>
-                        </div>
-                        <!-- message -->
-                        <div class="form-group">
-                            <label for="message" class="d-none">Escreva sua mensagem...</label>
-                            <textarea id="message" class="form-control" placeholder="Escreva sua mensagem..."
-                                      rows="4" required></textarea>
-                        </div>
-                        <!-- button action -->
-                        <div class="button_form">
-                            <button type="submit" name="submit" value="submit" class="btn btn-color1">
-                                Enviar contato
-                            </button>
-                        </div>
-                    </form>
+                    <?php echo do_shortcode('[contact-form-7 id="84" title="Single Page"]'); ?>
                 </div>
             </div>
         </div>
@@ -272,12 +219,21 @@ if ($architecturalPlan != null):
             <!-- content -->
             <div class="main_architecturalPlan_content">
                 <div class="main_architecturalPlan_content_grid">
-                    <?php foreach ($architecturalPlan as $keyArchitecturalPlan): ?>
-                        <!-- architectural plan -->
-                        <div class="main_architecturalPlan_content_grid_image">
-                            <img src="<?= $keyArchitecturalPlan; ?>" alt="Planta Arquitetônica - KBImob" />
-                        </div>
-                    <?php endforeach; ?>
+                    <?php
+                    if ($architecturalPlan):
+                        ?>
+                        <?php foreach ($architecturalPlan as $architecturalPlan): ?>
+
+                            <!-- image -->
+                            <div class="main_architecturalPlan_content_grid_image">
+                                <a href="<?= $architecturalPlan; ?>" data-lightbox="architecturalPlan">
+                                    <img src="<?= $architecturalPlan; ?>" alt="Imagens Imobiliária KBImob"
+                                         class="img-fluid" />
+                                </a>
+                            </div>
+
+                        <?php endforeach; ?>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -298,9 +254,7 @@ if ($architecturalPlan != null):
             $location = get_field('localizacao');
             if ($location):
                 ?>
-                <div class="acf-map" data-zoom="16">
-                    <div class="marker" data-lat="<?php echo esc_attr($location['lat']); ?>" data-lng="<?php echo esc_attr($location['lng']); ?>"></div>
-                </div>
+                <?php the_field('localizacao'); ?>
             <?php endif; ?>
         </div>
     </div>

@@ -28,42 +28,8 @@
                             <p>
                                 <img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-mail.svg" alt="Vetor KBImob" />Cadastre-se
                             </p>
-                            <form>
-                                <!-- name -->
-                                <div class="form-group">
-                                    <input id="name" type="text" class="form-control" placeholder="Insira seu nome"
-                                           size="35" maxlength="100" required />
-                                </div>
-                                <!-- mail -->
-                                <div class="form-group">
-                                    <input id="mail" type="email" class="form-control"
-                                           placeholder="Insira seu melhor e-mail" size="35" maxlength="70" required />
-                                </div>
-                                <!-- phone -->
-                                <div class="form-group">
-                                    <input id="phone" type="tel" class="form-control"
-                                           placeholder="Insira seu telefone com DDD..." size="35" maxlength="70"
-                                           required />
-                                </div>
-                                <!-- creci -->
-                                <div class="form-group">
-                                    <input id="phone" type="text" class="form-control"
-                                           placeholder="Insira o seu número de registro CRECI ou Estágio" size="35"
-                                           maxlength="70" required />
-                                </div>
-                                <!-- message -->
-                                <div class="form-group">
-                                    <label for="message" class="d-none">Escreva sua mensagem...</label>
-                                    <textarea id="message" class="form-control"
-                                              placeholder="Escreva sua mensagem..." rows="4" required></textarea>
-                                </div>
-                                <!-- button action -->
-                                <div class="button_form">
-                                    <button type="submit" name="submit" value="submit" class="btn btn-color1">
-                                        Enviar contato
-                                    </button>
-                                </div>
-                            </form>
+                            <?php echo do_shortcode('[contact-form-7 id="83" title="Area Corretor"]'); ?>
+
                         </div>
                     </div>
                     <div class="col-sm-5">
@@ -226,23 +192,7 @@
                     negócios e todos os lançamentos!
                 </p>
                 <!-- form -->
-                <form>
-                    <!-- input -->
-                    <div class="form-group">
-                        <input id="ctaName" class="form-control" type="text" placeholder="Digite seu nome" />
-                    </div>
-                    <!-- input -->
-                    <div class="form-group">
-                        <input id="inputEscolha" class="form-control" type="email"
-                               placeholder="Digite seu melhor e-mail" />
-                    </div>
-                    <!-- button -->
-                    <div class="main_ctaForm_content_button">
-                        <button type="submit" class="btn btn-color1 btn-block">
-                            Me avise!
-                        </button>
-                    </div>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="82" title="CTA Form"]'); ?>
             </div>
         </div>
     </section>
@@ -300,18 +250,14 @@
                     <div class="col-lg-5">
                         <div class="main_realState_content_media">
                             <div class="main_realState_content_media_container">
-                                <a href="https://www.facebook.com/kalila.carla" target="_blank"><img
-                                        src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-facebook.svg" alt="Vetor Facebook" /></a>
-
-                                <a href="https://www.linkedin.com/in/kalila-carla-324b51147" target="_blank"><img
-                                        src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-linkedin.svg" alt="Vetor LinkedIn" /></a>
-
-                                <a href="https://instagram.com/kalilacarla?igshid=1pr3ruvvjtpsx"
-                                   target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-instagram.svg"
-                                                     alt="Vetor Instagram" /></a>
+                                <a href="https://www.facebook.com/kbimoboficial" target="_blank"><img
+                                        src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-facebook.svg" alt="Vetor Facebook"></a>
+                                <a href="https://www.linkedin.com/in/kbi-kalila-business-intelligence-ab564b1a2/" target="_blank"><img
+                                        src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-linkedin.svg" alt="Vetor LinkedIn"></a>
+                                <a href="https://www.instagram.com/kbimob/"
+                                   target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-instagram.svg" alt="Vetor Instagram"></a>
                                 <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511963840832"
-                                   target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-whatsapp-2.svg"
-                                                     alt="Vetor WhatsApp" /></a>
+                                   target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-whatsapp-2.svg" alt="Vetor WhatsApp"></a>
                             </div>
                         </div>
                     </div>

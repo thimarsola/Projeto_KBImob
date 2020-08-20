@@ -24,31 +24,13 @@
                     <!-- content -->
                     <div class="col-lg-7 col-md-6">
                         <div class="main_about_content_text">
-                            <p>''Respeito, transparência e qualidade, sobre esses 3
-                                pilares, sustentasse a fundação da
-                                KBImob.</p>
+                            <p>"Respeito, Transparência e Qualidade, sobre esses três pilares sustenta-se a fundação da KBImob.</p>
                             <br>
-                            <p>Trabalhamos focados sempre, podemos assim, entregar ao
-                                nosso cliente o melhor em
-                                atendimento, tanto na busca do imóvel dos seus sonhos, da
-                                mudança, do investimento, da
-                                racionalidade, enfim, em todos os motivos, a certeza da
-                                melhor busca.</p>
+                            <p>Trabalhamos focados sempre, assim podemos entregar ao nosso cliente o melhor em atendimento, na busca do imóvel dos seus sonhos, da mudança, do investimento, da racionalidade... Enfim, em todos os motivos a certeza da melhor busca.</p>
                             <br>
-                            <p>Organizando todas as informações do imóvel que procura, do
-                                seu momento de vida, do seu
-                                perfil e, juntando a isso, nossa honestidade, informações
-                                corretas e transparência,
-                                entregaremos a você nosso cliente, toda a excelência em
-                                atendimento e por consequência,
-                                a busca correta do imóvel e a realização da compra certa!!
-                            </p>
+                            <p>Organizamos todas as informações do imóvel que procura, do seu momento de vida e do seu perfil, agregando nossa honestidade, informações corretas e transparência. Entregaremos a você toda a excelência em atendimento e, por consequência, a busca do imóvel e a realização da compra certa!</p>
                             <br>
-                            <p>Por isso, estamos sempre em busca de melhorar, atualizar,
-                                treinar e capacitar nossos
-                                especialistas, e poder assim, ter o reconhecimento do
-                                cliente de um ótimo trabalho."
-                            </p>
+                            <p>Por isso buscamos sempre melhorar, atualizar, treinar e capacitar nossos especialistas, e assim, sermos reconhecidos pelo nosso ótimo trabalho para o cliente."</p>
                         </div>
                     </div>
                 </div>
@@ -68,21 +50,7 @@
                 <p>Deixe o seu nome e o seu melhor e-mail nos campos abaixo e nós vamos lhe informar sobre os
                     melhores negócios e todos os lançamentos!</p>
                 <!-- form -->
-                <form>
-                    <!-- input -->
-                    <div class="form-group">
-                        <input id="ctaName" class="form-control" type="text" placeholder="Digite seu nome">
-                    </div>
-                    <!-- input -->
-                    <div class="form-group">
-                        <input id="inputEscolha" class="form-control" type="email"
-                               placeholder="Digite seu melhor e-mail">
-                    </div>
-                    <!-- button -->
-                    <div class="main_ctaForm_content_button">
-                        <button type="submit" class="btn btn-color1 btn-block">Me avise!</button>
-                    </div>
-                </form>
+                <?php echo do_shortcode('[contact-form-7 id="82" title="CTA Form"]'); ?>
             </div>
         </div>
     </section>
@@ -132,11 +100,11 @@
                     <div class="col-lg-5">
                         <div class="main_realState_content_media">
                             <div class="main_realState_content_media_container">
-                                <a href="https://www.facebook.com/kalila.carla" target="_blank"><img
+                                <a href="https://www.facebook.com/kbimoboficial" target="_blank"><img
                                         src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-facebook.svg" alt="Vetor Facebook"></a>
-                                <a href="https://www.linkedin.com/in/kalila-carla-324b51147" target="_blank"><img
+                                <a href="https://www.linkedin.com/in/kbi-kalila-business-intelligence-ab564b1a2/" target="_blank"><img
                                         src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-linkedin.svg" alt="Vetor LinkedIn"></a>
-                                <a href="https://instagram.com/kalilacarla?igshid=1pr3ruvvjtpsx"
+                                <a href="https://www.instagram.com/kbimob/"
                                    target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-instagram.svg" alt="Vetor Instagram"></a>
                                 <a href="https://api.whatsapp.com/send?l=pt_BR&phone=5511963840832"
                                    target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/_cdn/img/vt-whatsapp-2.svg" alt="Vetor WhatsApp"></a>

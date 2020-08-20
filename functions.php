@@ -230,17 +230,3 @@ add_filter('acf/fields/google_map/api', 'googleMaps');
 
 add_theme_support('post-thumbnails');
 
-// //CREATE SEARCH FORM
-// register_sidebar(
-//     [
-//         'name' => 'Busca',
-//         'id' => 'busca',
-//         'before_widget' => '<div class="main_product_content_form">',
-//         'after_widget' => '</div>',
-// //        'before_title' => '<h4>',
-// //        'after_title' => '</h4>'
-//     ]
-// );
-
-// // contact form 7
-// add_shortcode('the_title', 'get_the_title');
