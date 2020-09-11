@@ -17,7 +17,7 @@ if (is_home()):
                         )
                 );
                 ?>
-                <select name="modelo" id = "inputEscolha" class = "form-control" required>
+                <select name="modelo" id = "inputEscolha" class = "form-control">
                     <option value="" selected>Escolha...</option>
                     <?php
                     if (!empty($modelos) && is_array($modelos)) {
@@ -41,7 +41,7 @@ if (is_home()):
                         )
                 );
                 ?>
-                <select name="status" id = "inputStatus" class = "form-control" required>
+                <select name="status" id = "inputStatus" class = "form-control">
                     <option value="" selected>Escolha...</option>
                     <?php
                     if (!empty($status) && is_array($status)) {
@@ -66,7 +66,7 @@ if (is_home()):
                         )
                 );
                 ?>
-                <select name="tipo" id = "inputTipo" class = "form-control" required>
+                <select name="tipo" id = "inputTipo" class = "form-control">
                     <option value="" selected>Escolha...</option>
                     <?php
                     if (!empty($tipos) && is_array($tipos)) {
@@ -91,7 +91,7 @@ if (is_home()):
                         )
                 );
                 ?>
-                <select name="regiao" id = "inputLocalizacao" class = "form-control" required>
+                <select name="regiao" id = "inputLocalizacao" class = "form-control">
                     <option value="" selected>Escolha...</option>
                     <?php
                     if (!empty($regioes) && is_array($regioes)) {
@@ -128,7 +128,7 @@ if (is_home()):
                     )
             );
             ?>
-            <select name="modelo" id = "inputEscolha" class = "form-control" required>
+            <select name="modelo" id = "inputEscolha" class = "form-control">
                 <option value="" selected>Escolha...</option>
                 <?php
                 if (!empty($modelos) && is_array($modelos)) {
@@ -152,7 +152,7 @@ if (is_home()):
                     )
             );
             ?>
-            <select name="status" id = "inputStatus" class = "form-control" required>
+            <select name="status" id = "inputStatus" class = "form-control">
                 <option value="" selected>Escolha...</option>
                 <?php
                 if (!empty($status) && is_array($status)) {
@@ -177,7 +177,7 @@ if (is_home()):
                     )
             );
             ?>
-            <select name="tipo" id = "inputTipo" class = "form-control" required>
+            <select name="tipo" id = "inputTipo" class = "form-control">
                 <option value="" selected>Escolha...</option>
                 <?php
                 if (!empty($tipos) && is_array($tipos)) {
@@ -202,7 +202,7 @@ if (is_home()):
                     )
             );
             ?>
-            <select name="regiao" id = "inputLocalizacao" class = "form-control" required>
+            <select name="regiao" id = "inputLocalizacao" class = "form-control">
                 <option value="" selected>Escolha...</option>
                 <?php
                 if (!empty($regioes) && is_array($regioes)) {
@@ -217,7 +217,7 @@ if (is_home()):
         <!--dormitorios-->
         <div class="form-group">
             <label for="inputDormitorio">Dormitórios</label>
-            <select name="dormitorio" id="inputDormitorio" class = "form-control" required>
+            <select name="dormitorio" id="inputDormitorio" class = "form-control">
                 <option value="" selected>Escolha...</option>
                 <?php
                 for ($i = 1; $i <= 10; $i++) {
@@ -229,7 +229,7 @@ if (is_home()):
         <!--suites-->
         <div class="form-group">
             <label for="inputSuite">Suítes</label>
-            <select name="suite" id="inputSuite" class = "form-control" required>
+            <select name="suite" id="inputSuite" class = "form-control">
                 <option value="" selected>Escolha...</option>
                 <?php
                 for ($i = 1; $i <= 10; $i++) {
@@ -241,7 +241,7 @@ if (is_home()):
         <!--banheiro-->
         <div class="form-group">
             <label for="inputBanheiro">Banheiros</label>
-            <select name="banheiro" id="inputBanheiro" class = "form-control" required>
+            <select name="banheiro" id="inputBanheiro" class = "form-control">
                 <option value="" selected>Escolha...</option>
                 <?php
                 for ($i = 1; $i <= 10; $i++) {
@@ -253,7 +253,7 @@ if (is_home()):
         <!--garagem-->
         <div class="form-group">
             <label for="inputGaragem">Garagem</label>
-            <select name="garagem" id="inputGaragem" class = "form-control" required>
+            <select name="garagem" id="inputGaragem" class = "form-control">
                 <option value="" selected>Escolha...</option>
                 <?php
                 for ($i = 1; $i <= 10; $i++) {

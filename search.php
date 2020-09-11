@@ -28,81 +28,94 @@
                     <div class="main_cardAds_content">
                         <?php
                         $postType = get_query_var('post_type');
-                        $regiao = isset($_GET['regiao']) ? $_GET['regiao'] : '';
-                        $status = isset($_GET['status']) ? $_GET['status'] : '';
-                        $tipo = isset($_GET['tipo']) ? $_GET['tipo'] : '';
-                        $modelo = isset($_GET['modelo']) ? $_GET['modelo'] : '';
+                        $regiao = isset($_GET['regiao']) ? $_GET['regiao'] : null;
+                        $status = isset($_GET['status']) ? $_GET['status'] : null;
+                        $tipo = isset($_GET['tipo']) ? $_GET['tipo'] : null;
+                        $modelo = isset($_GET['modelo']) ? $_GET['modelo'] : null;
+                        $dormitorio = isset($_GET['dormitorio']) ? $_GET['dormitorio'] : null;
+                        $suite = isset($_GET['suite']) ? $_GET['suite'] : null;
+                        $banheiro = isset($_GET['banheiro']) ? $_GET['banheiro'] : null;
+                        $garagem = isset($_GET['garagem']) ? $_GET['garagem'] : null;
 
                         $paged = ( get_query_var('paged') ) ? absint(get_query_var('paged')) : 1;
 
-
                         $arg_category = [
-                            'posts_per_page' => 9,
+                            'posts_per_page' => -1,
                             'post_type' => $postType,
-                            'tax_query' => [
-                                [
-                                    'taxonomy' => 'modelo',
-                                    'field' => 'slug',
-                                    'terms' => 'venda'
-                                ]
-                            ],
+                            'tax_query' => ['relation' => 'AND'],
+                            'meta_query' => ['relation' => 'AND'],
                             'paged' => $paged,
                         ];
 
 
-                        if (!empty($modelo) || !empty($status) || !empty($tipo) || !empty($regiao)) {
-                            $arg_category['tax_query'] = [
-                                'relation' => 'AND',
-                                [
-                                    'taxonomy' => 'modelo',
-                                    'field' => 'slug',
-                                    'terms' => $modelo
-                                ],
-                                [
-                                    'taxonomy' => 'status',
-                                    'field' => 'slug',
-                                    'terms' => $status
-                                ],
-                                [
-                                    'taxonomy' => 'tipo',
-                                    'field' => 'slug',
-                                    'terms' => $tipo
-                                ],
-                                [
-                                    'taxonomy' => 'regiao',
-                                    'field' => 'slug',
-                                    'terms' => $regiao
-                                ]
+                        if ($modelo !=  null){
+                            $taxModelo = [
+                                'taxonomy' => 'modelo',
+                                'field' => 'slug',
+                                'terms' => $modelo
                             ];
+                            array_push($arg_category['tax_query'], $taxModelo);
                         }
 
-                        $dormitorio = isset($_GET['dormitorio']) ? $_GET['dormitorio'] : '';
-                        $suite = isset($_GET['suite']) ? $_GET['suite'] : '';
-                        $banheiro = isset($_GET['banheiro']) ? $_GET['banheiro'] : '';
-                        $garagem = isset($_GET['garagem']) ? $_GET['garagem'] : '';
-
-
-                        if (!empty($dormitorio) || !empty($suite) || !empty($banheiro) || !empty($garagem)) {
-                            $arg_category['meta_query'] = [
-                                'relation' => 'AND',
-                                [
-                                    'key' => 'dormitorio',
-                                    'value' => $dormitorio
-                                ],
-                                [
-                                    'key' => 'suite',
-                                    'value' => $suite
-                                ],
-                                [
-                                    'key' => 'banheiro',
-                                    'value' => $banheiro
-                                ],
-                                [
-                                    'key' => 'garagem',
-                                    'value' => $garagem
-                                ]
+                        if ($status != null){
+                            $taxStatus['tax_query'] = [
+                                'taxonomy' => 'status',
+                                'field' => 'slug',
+                                'terms' => $status
                             ];
+                            array_push($arg_category['tax_query'], $taxStatus);
                         }
+
+                        if ($tipo != null){
+                            $taxTipo['tax_query'] = [
+                                'taxonomy' => 'tipo',
+                                'field' => 'slug',
+                                'terms' => $tipo
+                            ];
+                            array_push($arg_category['tax_query'], $taxTipo);
+                        }
+
+                        if ($regiao != null){
+                            $taxRegiao['tax_query'] = [
+                                'taxonomy' => 'regiao',
+                                'field' => 'slug',
+                                'terms' => $regiao
+                            ];
+                            array_push($arg_category['tax_query'], $taxRegiao);
+                        }                        
+
+                        if ($dormitorio !=  null){
+                            $metaDormitorio = [
+                                'key' => 'dormitorio',
+                                'value' => $dormitorio
+                            ];
+                            array_push($arg_category['meta_query'], $metaDormitorio);
+                        }
+
+                        if ($suite !=  null){
+                            $metaSuite = [
+                                'key' => 'suite',
+                                'value' => $suite
+                            ];
+                            array_push($arg_category['meta_query'], $metaSuite);
+                        }
+
+                        if ($banheiro !=  null){
+                            $metaBanheiro = [
+                                'key' => 'banheiro',
+                                'value' => $banheiro
+                            ];
+                            array_push($arg_category['meta_query'], $metaBanheiro);
+                        }
+
+                        if ($garagem !=  null){
+                            $metaGaragem = [
+                                'key' => 'garagem',
+                                'value' => $garagem
+                            ];
+                            array_push($arg_category['meta_query'], $metaGaragem);
+                        }
+
                         ?>
                         <?php
                         // the query

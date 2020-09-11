@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.kbimob.com.br/robots.txt
+Sitemap: https://www.kbimob.com.br/sitemap.xml
